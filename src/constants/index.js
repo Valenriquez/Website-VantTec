@@ -1,3 +1,10 @@
+import {
+  sdv,
+  drone,
+  boat,
+  submarine,
+} from "../assets";
+
 export const navLinks = [
   {
     id: "about",
@@ -20,3 +27,24 @@ export const navLinks = [
     title: "Sponsors"
   }
 ];
+
+const services = [
+  {
+    title: "SDV",
+    icon: sdv,
+  },
+  {
+    title: "Drone",
+    icon: drone,
+  },
+  {
+    title: "Boat",
+    icon: boat,
+  },
+  {
+    title: "Submarine",
+    icon: submarine,
+  },
+]
+
+export { services };
