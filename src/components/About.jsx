@@ -1,22 +1,21 @@
-import React from 'react'
-
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { styles } from "../styles";
 import boat from "../assets/boat.jpg";
-
 
 const Section = ({ title, heading, description }) => {
   return (
     <div className='p-8 px-4 sm:px-18'>
       <p className='text-sm font-roboto mb-4'>{title}</p> {/* Separación del título */}
       <h1 className='text-3xl sm:text-5xl font-bold font-roboto mb-6'>{heading}</h1> {/* Separación del heading */}
-      <p className='pt-4 text-lg sm:text-2xl font-thin font-roboto'>{description}</p>
+      <p className='text-lg sm:text-2xl font-thin font-roboto'>{description}</p>
     </div>
   );
 };
 
 const Achievement = ({ title, description, isList = false }) => {
   return (
-    <div className='p-8 w-1/2 pt-0 h-fit'>
+    <div className='p-8 w-3/4 pt-0 h-fit'>
       <p className='text-4xl font-bold font-roboto'>{title}</p>
       {/* Si isList es true, renderizamos una lista, de lo contrario, renderizamos un párrafo */}
       {isList ? (
@@ -32,10 +31,12 @@ const Achievement = ({ title, description, isList = false }) => {
   );
 }
 
-
-const BigAchievement = ({ title, description }) => {
+const BigAchievement = ({ title, description, delay }) => {
   return (
-    <div className='p-8 w-full lg:w-auto flex-grow flex flex-col items-center'>
+    <div
+      className={`p-8 w-full lg:w-auto flex-grow flex flex-col items-center big-achievement opacity-0 transform transition-opacity duration-1000 ease-out`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <h1 className='text-6xl sm:text-8xl font-medium'>
         {title}
       </h1>
@@ -45,12 +46,31 @@ const BigAchievement = ({ title, description }) => {
 }
 
 const BigAchievements = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.big-achievement');
+    elements.forEach((element, index) => {
+      if (inView) {
+        element.classList.remove('opacity-0');
+        element.classList.add('opacity-100');
+        element.style.transitionDelay = `${index * 0.3}s`;
+      } else {
+        element.classList.remove('opacity-100');
+        element.classList.add('opacity-0');
+      }
+    });
+  }, [inView]);
+
   return (
-    <div className='flex flex-wrap justify-evenly w-full gap-1'>
-      <BigAchievement title="2017" description="founded" />
-      <BigAchievement title="73" description="members" />
-      <BigAchievement title="12" description="papers published" />
-      <BigAchievement title="18" description="awards" />
+    <div ref={ref} className='flex flex-wrap justify-evenly w-full gap-1'>
+      <BigAchievement title="2017" description="founded" delay="0" />
+      <BigAchievement title="73" description="members" delay="300" />
+      <BigAchievement title="12" description="papers published" delay="600" />
+      <BigAchievement title="18" description="awards" delay="900" />
     </div>
   );
 }
@@ -79,25 +99,43 @@ const Achievements = () => {
 };
 
 const About = () => {
+  const [paragraphRef, paragraphInView] = useInView({
+    threshold: 0.1,
+  });
+  const [imageRef, imageInView] = useInView({
+    threshold: 0.1,
+  });
+
   return (
     <div>
-      <div className='w-full min-h-screen flex flex-col lg:flex-row'>
+      <div className='w-full min-h-full flex flex-col lg:flex-row'>
 
-        <div className='w-full lg:w-3/5'>
-          <Section
-            title="About us"
-            heading="We aim to become one of the main exponents of autonomous vehicles in Mexico."
-            description="VantTec is a group of students and teachers from different areas de Tecnológico de Monterrey with the aim of designing, building, and programming autonomous non-manned vehicles, as well as developing technologies for their operation."
-          />
-          <Achievements />
+        <div ref={paragraphRef} className='w-full lg:w-1/2 flex justify-center items-center'>
+          <div
+            className={`flex flex-col justify-center items-center p-6 h-full transition-transform duration-1000 ${
+              paragraphInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
+            }`}
+          >
+            <Section title={"About"} heading={"VantTec"} description={"VantTec is a group of students and teachers from different areas de Tecnológico de Monterrey with the aim of designing, building, and programming autonomous non-manned vehicles, as well as developing technologies for their operation."}/>
+            <div className='pl-4 w-full'>
+              <button className='bg-blue-500 text-white font-roboto font-bold py-2 px-8 rounded-lg hover:bg-blue-700 self-start'>Learn more</button>
+            </div>
+          </div>
         </div>
 
-        <div className='w-full lg:w-2/5 h-full flex justify-center items-start' style={{ marginTop: '250px' }}>
-          <img
-            src={boat}
-            alt="About us"
-            className='w-[300px] sm:w-[500px] h-[600px] sm:h-[690px] object-cover'
-          />
+        <div className='w-full lg:w-1/2 flex justify-center items-center'>
+          <div
+            ref={imageRef}
+            className={`flex justify-center items-center transition-transform duration-1000 ${
+              imageInView ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
+            }`}
+          >
+            <img
+              src={boat}
+              alt="About us"
+              className='w-[600px] h-[300px] sm:w-[600px] sm:h-[300px] object-contain bg-orange-400'
+            />
+          </div>
         </div>
 
       </div>
@@ -110,4 +148,4 @@ const About = () => {
 };
 
 
-export default About
+export default About;
