@@ -7,6 +7,11 @@ import drone from "./drone.jpeg";
 import boat from "./boat.jpg";
 import submarine from "./submarine.jpg";
 import videoBG from "./videoBG.mp4";
+import juanito from "./juanito.jpg";
+import maria from "./maria.jpg";
+import pedro from "./pedro.jpg";
+import ana from "./ana.jpg";
+import vanttec from "./vanttec.jpg";
 
 export {
   logo,
@@ -18,4 +23,9 @@ export {
   submarine,
   arrow,
   videoBG,
+  juanito,
+  maria,
+  pedro,
+  ana,
+  vanttec,
 };
