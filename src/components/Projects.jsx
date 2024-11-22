@@ -53,10 +53,10 @@ const Projects = () => {
       <div className={`mt-[80px]  ${styles.paddingX} xl:flex-row
         flex flex-col-reverse gap-10 overflow-hidden`}>
         <div className="flex-[0.75]">
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Vant<span className="text-[#345ba3]">TEC</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white`}>
-            Navigating the Future</p>
+          <h1 className={`${styles.sectionSubText} text-white`}>
+            View our Work </h1>
+          <p className={`${styles.sectionHeadText} mt-2 text-white`}>
+            Projects</p>
           <div className="mt-6 flex flex-wrap gap-7">
             {cardsData.map((cardData, index) => (
               <AnimatedCard key={cardData.title} index={index} 
