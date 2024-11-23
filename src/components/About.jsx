@@ -1,8 +1,106 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { testimonials } from '../constants';
 import { styles } from '../styles';
 import { vanttec, arrow } from '../assets';
+import { useInView } from 'react-intersection-observer';
+
+const Section = ({ title, heading, description }) => {
+  return (
+    <div className='p-8 px-4 sm:px-18'>
+      <p className='text-sm font-roboto mb-4'>{title}</p> {/* Separación del título */}
+      <h1 className='text-3xl sm:text-5xl font-bold font-roboto mb-6'>{heading}</h1> {/* Separación del heading */}
+      <p className='text-lg sm:text-2xl font-thin font-roboto'>{description}</p>
+    </div>
+  );
+};
+
+const Achievement = ({ title, description, isList = false }) => {
+  return (
+    <div className='p-8 w-3/4 pt-0 h-fit'>
+      <p className='text-4xl font-bold font-roboto'>{title}</p>
+      {/* Si isList es true, renderizamos una lista, de lo contrario, renderizamos un párrafo */}
+      {isList ? (
+        <ul className='list-disc pl-5 pt-2 text-xl font-thin font-roboto'>
+          {description.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className='pt-2 text-xl font-thin font-roboto'>{description}</p>
+      )}
+    </div>
+  );
+}
+
+const BigAchievement = ({ title, description, delay }) => {
+  return (
+    <div
+      className={`p-8 w-full lg:w-auto flex-grow flex flex-col items-center big-achievement opacity-0 transform transition-opacity duration-1000 ease-out`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <h1 className='text-6xl sm:text-8xl font-medium'>
+        {title}
+      </h1>
+      <p className='text-lg sm:text-2xl mt-auto'>{description}</p>
+    </div>
+  );
+}
+
+const BigAchievements = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.big-achievement');
+    elements.forEach((element, index) => {
+      if (inView) {
+        element.classList.remove('opacity-0');
+        element.classList.add('opacity-100');
+        element.style.transitionDelay = `${index * 0.3}s`;
+      } else {
+        element.classList.remove('opacity-100');
+        element.classList.add('opacity-0');
+        element.style.transitionDelay = '0s';
+      }
+    });
+  }, [inView]);
+
+  return (
+    <div ref={ref} className='flex flex-wrap justify-evenly w-full gap-1'>
+      <BigAchievement title="2017" description="founded" delay="0" />
+      <BigAchievement title="73" description="members" delay="300" />
+      <BigAchievement title="12" description="papers published" delay="600" />
+      <BigAchievement title="18" description="awards" delay="900" />
+    </div>
+  );
+}
+
+const Achievements = () => {
+  return (
+    <div className='flex flex-wrap w-full pt-4'>
+      <Achievement title="Mission" description="Participate annually in RoboNation competitions, as well as other autonomous vehicle projects. Develop research projects that culminate in scientific articles based on technologies used by the group to promote science and technology in areas related to autonomous vehicles." />
+      <Achievement title="Vision" description="To be one of the main exponents in Mexico in terms of autonomous vehicles. To inspire young people to get involved in research in areas of science and technology. In addition, to help them learn about national and international opportunities in the academic and professional fields." />
+      <Achievement title="Since 2017" description="We have worked to participate annually in RoboNation's RoboBoat and RoboSub contests, becoming a leading group where every year we manage to position ourselves among the best teams at an international level." />
+      <Achievement
+        title="Values"
+        description={[
+          "Respect and help others.",
+          "Create the craziest things.",
+          "Share knowledge.",
+          "Be yourself and be confident in your talent.",
+          "Unlimited creativity.",
+          "Passion and Inspiration.",
+          "Commitment and dedication.",
+        ]}
+        isList={true}
+      />
+    </div>
+  );
+};
+
 
 const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
   const x = useMotionValue(0);
@@ -19,28 +117,29 @@ const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
   })
 
   const handleDragEnd = () => {
-    if (Math.abs(x.get()) > 50){
+    if (Math.abs(x.get()) > 50) {
       setCards(prev => prev.filter(v => v.id !== id));
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-[300px] h-[450px] p-[1.5px] rounded-lg bg-gradient-to-r 
       from-blue-500 via-indigo-500 to-cyan-500 shadow-card"
       whileDrag={{ scale: 1.1 }}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
-      style={{gridRow: 1, 
-        gridColumn: 1, 
-        x, 
-        opacity, 
-        rotate, 
+      style={{
+        gridRow: 1,
+        gridColumn: 1,
+        x,
+        opacity,
+        rotate,
         transition: "0.125s transform",
         boxShadow: isFront ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb (0 0 0 / 0.5)" : undefined,
-      
+
       }}
-      animate={{scale: isFront ? 1: 0.98,}}
+      animate={{ scale: isFront ? 1 : 0.98, }}
       onDragEnd={handleDragEnd}
     >
       <div className="bg-gray-600 rounded-lg p-6 shadow-md flex flex-col items-center hover:cursor-grab origin-bottom active:cursor-grabbing w-full h-full">
@@ -56,34 +155,55 @@ const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
   );
 };
 
+/*
+<div ref={paragraphRef} className='w-full lg:w-1/2 flex justify-center items-center'>
+          <div
+            className={`flex flex-col justify-center items-center p-6 h-full transition-transform duration-1000 ${
+              paragraphInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
+            }`}
+          >
+            <Section title={"About"} heading={"VantTec"} description={"VantTec is a group of students and teachers from different areas de Tecnológico de Monterrey with the aim of designing, building, and programming autonomous non-manned vehicles, as well as developing technologies for their operation."}/>
+            <div className='pl-4 w-full'>
+              <button className='bg-blue-500 text-white font-roboto font-bold py-2 px-8 rounded-lg hover:bg-blue-700 self-start'>Learn more</button>
+            </div>
+          </div>
+*/
+
 const About = () => {
   const [cards, setCards] = useState(testimonials);
+  const [paragraphInView, setParagraphInView] = useInView({
+    threshold: 0.1,
+  })
+  const [imageInView, setImageInView] = useInView({
+    threshold: 0.1,
+  })
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <img src={vanttec} className="absolute w-full h-full object-cover" />
       <div className="absolute w-full h-full top-0 left-0 bg-[#000000cc]"></div>
-      <div className={`absolute inset-0 top-[120px] max-w-7xl 
+      <div className={`absolute inset-0 top-[0px] max-w-7xl 
         mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
-        <div className="flex-1 mt-20">
+        <div className="flex-1 mt-10">
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Vant<span className="text-[#345ba3]">TEC</span>, 
+            Vant<span className="text-[#345ba3]">TEC</span>,
             About Us
           </h1>
           <p className={`${styles.heroSubText} mt-2 
           text-white`}>
-            VantTEC is a leading innovator in the tech industry, 
-            committed to creating innovative solutions that 
+            VantTEC is a leading innovator in the tech industry,
+            committed to creating innovative solutions that
             enhance the lives of our customers.
           </p>
         </div>
-        <div className="flex-1 mt-20 grid place-items-center">
+        <div className="flex-1 mt-10 grid place-items-center">
           {cards.map((testimonial) => (
             <TestimonialCard key={testimonial.id} cards={cards}
-            setCards={setCards} {...testimonial} />
+              setCards={setCards} {...testimonial} />
           ))}
         </div>
-        <motion.div 
+        {/* 
+        <motion.div
           className='absolute xs:bottom-10 bottom-32 w-full flex 
           justify-center items-center'
           initial={{ opacity: 0 }}
@@ -112,6 +232,10 @@ const About = () => {
             </div>
           </a>
         </motion.div>
+        */}
+      </div>
+      <div className="absolute bottom-0 w-full">
+        <BigAchievements />
       </div>
     </section>
   );
