@@ -155,20 +155,6 @@ const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
   );
 };
 
-/*
-<div ref={paragraphRef} className='w-full lg:w-1/2 flex justify-center items-center'>
-          <div
-            className={`flex flex-col justify-center items-center p-6 h-full transition-transform duration-1000 ${
-              paragraphInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
-            }`}
-          >
-            <Section title={"About"} heading={"VantTec"} description={"VantTec is a group of students and teachers from different areas de Tecnológico de Monterrey with the aim of designing, building, and programming autonomous non-manned vehicles, as well as developing technologies for their operation."}/>
-            <div className='pl-4 w-full'>
-              <button className='bg-blue-500 text-white font-roboto font-bold py-2 px-8 rounded-lg hover:bg-blue-700 self-start'>Learn more</button>
-            </div>
-          </div>
-*/
-
 const About = () => {
   const [cards, setCards] = useState(testimonials);
   const [paragraphInView, setParagraphInView] = useInView({
