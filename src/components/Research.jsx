@@ -15,12 +15,12 @@ const Carousel = () => {
     <div className="w-full min-h-full">
       <div className="carousel rounded-box">
         {images.map((image, index) => (
-          <div key={index} className="carousel-item relative">
+          <div key={index} className="carousel-item relative p-8">
             {/* Image */}
             <img
               src={image.src}
               alt={image.alt}
-              className="w-48 h-auto object-cover"
+              className="w-48 h-auto object-cover rounded-xl"
             />
             {/* Hover Information */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
