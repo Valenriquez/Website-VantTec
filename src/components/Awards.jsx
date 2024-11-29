@@ -24,9 +24,9 @@ const AwardPage = ({ title, competition_image, award_card }) => {
     threshold: 0.1,
   });
   return (
-    <div className="h-screen flex flex-row px-16">
-      <div className="h-full flex w-full">
-        <div ref={ref01} className="w-7/12 h-full flex flex-col pl-8 py-8 pr-4">
+    <div className="h-screen flex flex-col sm:flex-row px-0">
+      <div className="h-full flex flex-col sm:flex-row w-full">
+        <div ref={ref01} className="sm:w-7/12 h-full flex flex-col py-8 px-4 sm:p-8">
           <h1 className={`text-white text-3xl items-start justify-start mb-4 transition-transform duration-1000 ${
               ref01InView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-y-full'
           }`}>{title}</h1>
@@ -34,7 +34,7 @@ const AwardPage = ({ title, competition_image, award_card }) => {
               ref02InView ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
             }`} src={competition_image} />
         </div>
-        <div ref={ref03} className={`w-5/12 h-full flex flex-col pr-8 py-8 pl-4`}>
+        <div ref={ref03} className={`sm:w-5/12 h-full flex flex-col py-8 px-4 sm:p-8`}>
           <img className={`bg-green-500 w-full h-full transition-transform duration-1000 ${
               ref03InView ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
         </div>

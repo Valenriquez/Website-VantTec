@@ -13,7 +13,7 @@ const Carousel = () => {
 
   return (
     <div className="w-full min-h-full">
-      <div className="carousel rounded-box">
+      <div className="carousel rounded-box w-full sm:w-auto">
         {images.map((image, index) => (
           <div key={index} className="carousel-item relative p-8">
             {/* Image */}
@@ -36,7 +36,7 @@ const Carousel = () => {
 const Research = () => {
   return (
     <section className="w-full min-h-full mx-auto flex flex-col">
-      <div className="mt-[80px] m-16">
+      <div className="mt-[80px] m-0 sm:m-16">
         <h1 className="text-3xl sm:text-5xl font-bold font-roboto mb-6">
           Research
         </h1>

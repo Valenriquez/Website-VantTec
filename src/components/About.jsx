@@ -165,11 +165,11 @@ const About = () => {
   })
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full h-full mx-auto`}>
       <img src={vanttec} className="absolute w-full h-full object-cover" />
       <div className="absolute w-full h-full top-0 left-0 bg-[#000000cc]"></div>
-      <div className={`absolute inset-0 top-[0px] max-w-7xl 
-        mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
+      <div className={`relative inset-0 top-[0px] max-w-7xl 
+        mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-start gap-5`}>
         <div className="flex-1 mt-10">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Vant<span className="text-[#345ba3]">TEC</span>,
@@ -220,7 +220,7 @@ const About = () => {
         </motion.div>
         */}
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="relative bottom-0 w-full">
         <BigAchievements />
       </div>
     </section>
