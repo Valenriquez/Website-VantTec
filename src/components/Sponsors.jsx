@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { boat } from '../assets'
+import { ansysInc, grupoSSC } from '../assets'
 
 
 const SponsorCard = ({ name, logo }) => {
@@ -31,10 +31,10 @@ const Sponsors = () => {
       </h1>
       <div className='m-8 mb-0 flex flex-row flex-grow'>
         <div className='flex-grow flex w-1/2 sm:h-[400px] justify-center items-center'>
-          <SponsorCard name="Sponsor 1" logo={boat} />
+          <SponsorCard name="Grupo SSC" logo={grupoSSC} />
         </div>
         <div className='flex-grow flex w-1/2 sm:h-[400px] justify-center items-center'>
-          <SponsorCard name="Sponsor 2" logo={boat} />
+          <SponsorCard name="AnsysInc" logo={ansysInc} />
         </div>
       </div>
     </div>

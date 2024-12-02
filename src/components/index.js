@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Research from './Research';
 import Awards from './Awards';
 import Sponsors from './Sponsors';
+import Footer from './Footer';
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   Awards,
   Sponsors,
   DronesCanvas, 
+  Footer
 }
