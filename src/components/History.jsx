@@ -1,9 +1,12 @@
 import React from 'react'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { SectionWrapper } from '../hoc';
 
 const History = () => {
   return (
-    <div>History</div>
+    <>
+    </>
   )
 }
 
-export default History
+export default SectionWrapper(History, "history")
