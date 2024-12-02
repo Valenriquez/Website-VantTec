@@ -31,5 +31,5 @@ export {
   ana,
   vanttec,
   grupoSSC,
-  ansysInc,
+  ansysInc
 };

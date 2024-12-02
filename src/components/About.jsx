@@ -101,24 +101,21 @@ const Achievements = () => {
   );
 };
 
-
-const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
+const TestimonialCard = ({ id, name, role, text, img, cards, setCards, resetCards }) => {
   const x = useMotionValue(0);
-
   const opacity = useTransform(x, [-150, 0, 150], [0, 1, 0]);
   const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
 
-  const isFront = id === cards[cards.length - 1].id
+  const isFront = id === cards[cards.length - 1]?.id;
 
   const rotate = useTransform(() => {
     const offset = isFront ? 0 : id % 2 ? 6 : -6;
-
     return `${rotateRaw.get() + offset}deg`;
-  })
+  });
 
   const handleDragEnd = () => {
     if (Math.abs(x.get()) > 50) {
-      setCards(prev => prev.filter(v => v.id !== id));
+      setCards((prev) => prev.filter((v) => v.id !== id));
     }
   };
 
@@ -136,15 +133,19 @@ const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
         opacity,
         rotate,
         transition: "0.125s transform",
-        boxShadow: isFront ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb (0 0 0 / 0.5)" : undefined,
-
+        boxShadow: isFront
+          ? "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb (0 0 0 / 0.5)"
+          : undefined,
       }}
-      animate={{ scale: isFront ? 1 : 0.98, }}
+      animate={{ scale: isFront ? 1 : 0.98 }}
       onDragEnd={handleDragEnd}
     >
       <div className="bg-gray-600 rounded-lg p-6 shadow-md flex flex-col items-center hover:cursor-grab origin-bottom active:cursor-grabbing w-full h-full">
-        <img src={img} alt={name} className="w-32 h-32 object-cover 
-        rounded-full border border-gray-300" />
+        <img
+          src={img}
+          alt={name}
+          className="w-32 h-32 object-cover rounded-full border border-gray-300"
+        />
         <div className="p-6 text-center">
           <h2 className="text-xl font-bold text-blue-900">{name}</h2>
           <h3 className="text-base text-blue-800">{role}</h3>
@@ -154,6 +155,39 @@ const TestimonialCard = ({ id, name, role, text, img, cards, setCards }) => {
     </motion.div>
   );
 };
+
+// Main Component
+const TestimonialList = ({ initialCards }) => {
+  const [cards, setCards] = React.useState(initialCards);
+
+  const resetCards = () => {
+    setCards(initialCards);
+  };
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative grid">
+        {cards.map((card) => (
+          <TestimonialCard
+            key={card.id}
+            {...card}
+            cards={cards}
+            setCards={setCards}
+          />
+        ))}
+      </div>
+      {cards.length === 0 && (
+        <button
+          onClick={resetCards}
+          className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        >
+          Restart
+        </button>
+      )}
+    </div>
+  );
+};
+
 
 const About = () => {
   const [cards, setCards] = useState(testimonials);
@@ -183,42 +217,9 @@ const About = () => {
           </p>
         </div>
         <div className="flex-1 mt-10 grid place-items-center">
-          {cards.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} cards={cards}
-              setCards={setCards} {...testimonial} />
-          ))}
+        <TestimonialList initialCards={testimonials} />
         </div>
-        {/* 
-        <motion.div
-          className='absolute xs:bottom-10 bottom-32 w-full flex 
-          justify-center items-center'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 5, duration: 1 }}>
-          <a href='#about'>
-            <div className='w-[48px] h-[48px] rounded-[10px] 
-              bg-gradient-to-r from-blue-500 via-indigo-500 
-            to-cyan-500 flex justify-center items-start p-[2px] 
-              hover:shadow-lg hover:shadow-purple-600/30'>
-              <div className='flex h-full w-full items-center 
-                justify-center rounded-[10px] bg-primary'>
-                <motion.div 
-                  animate={{
-                  y: [0, -10, 0],
-                  }}
-                  transition={{
-                  duration: 3, 
-                  repeat: Infinity, 
-                  repeatType: "loop",
-                  }}>
-                  <img src={arrow} alt="Flecha hacia abajo" 
-                  className=""/>
-                </motion.div>
-              </div>
-            </div>
-          </a>
-        </motion.div>
-        */}
+       
       </div>
       <div className="relative bottom-0 w-full">
         <BigAchievements />
