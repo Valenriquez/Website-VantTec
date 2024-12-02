@@ -12,6 +12,10 @@ import maria from "./maria.jpg";
 import pedro from "./pedro.jpg";
 import ana from "./ana.jpg";
 import vanttec from "./vanttec.jpg";
+import microsoft from "./microsoft.png";
+import google from "./google.png";
+import meta from "./meta.png";
+import apple from "./apple.png";
 
 export {
   logo,
@@ -28,4 +32,8 @@ export {
   pedro,
   ana,
   vanttec,
+  google,
+  microsoft,
+  meta,
+  apple,
 };

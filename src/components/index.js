@@ -6,6 +6,10 @@ import Projects from './Projects';
 import Research from './Research';
 import Awards from './Awards';
 import Sponsors from './Sponsors';
+import SwipeCards from './SwipeCards';
+import Vision from './Vision';
+import Mision from './Mision';
+import History from './History';
 
 export {
   Hero,
@@ -16,4 +20,8 @@ export {
   Awards,
   Sponsors,
   DronesCanvas, 
+  SwipeCards,
+  Vision,
+  Mision,
+  History,
 }

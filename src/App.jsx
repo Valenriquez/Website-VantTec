@@ -1,23 +1,17 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { About, Projects, Hero, Navbar, Research, Awards, Sponsors } from "./components";
+import { HomePage, AboutPage } from './pages';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Projects />
-        <Research />
-        <Awards />
-        <Sponsors />
-      </div>
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default App

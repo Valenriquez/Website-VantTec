@@ -1,80 +1,31 @@
-import { motion } from "framer-motion";
-import { Tilt } from 'react-tilt';
-import { styles } from "../styles";
-import { DronesCanvas } from "./canvas";
-import { cardsData } from "../constants";
-import { Slide, Fade } from "react-awesome-reveal";
-import { slideIn, fadeIn } from "../utils/motion";
-
-const AnimatedCard = ({ index, title, img, desc }) => {
-  return (
-      <Tilt className="xs:w-[250px] w-full">
-        <motion.div 
-          variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-          initial="hidden"
-          animate="show" 
-          className="w-full p-[1.5px] rounded-lg bg-gradient-to-r 
-          from-blue-500 via-indigo-500 to-cyan-500 shadow-card"
-        >
-          <div 
-            className="bg-tertiary rounded-lg overflow-hidden 
-            relative group"
-          >
-            <img src={img} alt={title} className="w-full h-[250px] 
-            rounded-lg object-cover" />
-              <div className="absolute left-0 top-[-100%] opacity-0 
-              group-hover:opacity-100 group-hover:top-0 p-3 w-full 
-              h-full bg-black/60 divide-neutral-500 
-              group-hover:backdrop-blur-sm duration-500">
-                <div className="space-y-2">
-                  <Slide cascade>
-                    <h1 className="text-2xl font-bold text-white">
-                      {title}</h1>
-                    <Fade cascade damping={0.05}>
-                      <p className="text-sm text-white">{desc}</p>
-                    </Fade>
-                    <div>
-                      <button className="border border-white-100 
-                      px-3 py-1 rounded-lg hover:bg-black/20 
-                      duration-300 text-sm">View</button>
-                    </div>
-                  </Slide>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </Tilt>
-      );
-};
+import React from 'react'
+import { styles } from '../styles';
+import { motion } from 'framer-motion';
+import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 
 const Projects = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex flex-col">
-      <div className={`mt-[80px]  ${styles.paddingX} xl:flex-row
-        flex flex-col-reverse gap-10 overflow-hidden`}>
-        <div className="flex-[0.75]">
-          <h1 className={`${styles.sectionSubText} text-white`}>
-            View our Work </h1>
-          <p className={`${styles.sectionHeadText} mt-2 text-white`}>
-            Projects</p>
-          <div className="mt-6 flex flex-wrap gap-7">
-            {cardsData.map((cardData, index) => (
-              <AnimatedCard key={cardData.title} index={index} 
-              {...cardData} />
-            ))}
-          </div>
+    <>
+      <div className="flex">
+        <div className="flex-1">
+          <img src="https://via.placeholder.com/500x500" alt="VantTec team photo" />
         </div>
-        <motion.div 
-          variants={slideIn('right', 'tween', 0.2, 1)}
-          initial="hidden"
-          animate="show"
-          className="xl:flex-1 xl:h-full md:h-[550px] h-[350px]"
-        >
-          <DronesCanvas />
-        </motion.div>
+        <div className="flex-1 pt-20">
+          <motion.div variants={textVariant()}>
+            <p className={`${styles.sectionSubText} text-right`}>What we stand for</p>
+            <h2 className={`${styles.sectionHeadText} text-right`}>Mision</h2>
+          </motion.div>
+          <motion.p variants={fadeIn("", "", 0.1, 1)}
+            className="mt-4 text-secondary text-[17px] max-w-3xl
+              leading-[30px] text-right">
+                VantTEC is a leading innovator in the tech industry,
+                committed to creating innovative solutions that enhance the lives of our customers.
+          </motion.p>
+        </div>
       </div>
-    </section>
+    </>
   )
 }
 
-export default Projects;
+export default SectionWrapper(Projects, "project")

@@ -7,6 +7,10 @@ import {
   maria,
   pedro,
   ana,
+  microsoft,
+  google,
+  meta,
+  apple,
 } from "../assets";
 
 export const navLinks = [
@@ -86,4 +90,23 @@ const testimonials = [
   }
 ]
 
-export { cardsData, testimonials };
+const institutions = [
+  {
+    title: "Microsoft",
+    icon: microsoft,
+  },
+  {
+    title: "Google",
+    icon: google,
+  },
+  {
+    title: "Meta",
+    icon: meta,
+  },
+  {
+    title: "Apple",
+    icon: apple,
+  }
+]
+
+export { cardsData, testimonials, institutions };
