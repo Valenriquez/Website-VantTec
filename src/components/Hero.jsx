@@ -4,6 +4,13 @@ import { arrow, videoBG } from '../assets'
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
+  const scrollToSection = () => {
+    window.scrollTo({
+      top: window.innerHeight * 0.90,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <video src={videoBG} autoPlay loop muted className="absolute w-full h-full object-cover" />
@@ -38,7 +45,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 13, duration: 1 }}
       >
-        <a href='#about'>
+        <a onClick={scrollToSection}>
           <div className='w-[48px] h-[48px] rounded-[10px] 
           bg-gradient-to-r from-blue-500 via-indigo-500 
           to-cyan-500 flex justify-center items-start p-[2px] 
