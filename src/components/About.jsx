@@ -4,6 +4,7 @@ import { testimonials } from '../constants';
 import { styles } from '../styles';
 import { vanttec, arrow } from '../assets';
 import { useInView } from 'react-intersection-observer';
+import Carousel from "./shared/Carousel.jsx";
 
 const Section = ({ title, heading, description }) => {
   return (
@@ -224,6 +225,7 @@ const About = () => {
       <div className="relative bottom-0 w-full">
         <BigAchievements />
       </div>
+
     </section>
   );
 };
