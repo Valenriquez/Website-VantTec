@@ -21,7 +21,7 @@ const Research = () => {
             <Carousel
                 images={images} // Pass the array of research paper images
                 height="550px" // Set a fixed height for carousel items
-                slidesToShow={4} // Show 3 slides at once on large screens
+                slidesToShow={3} // Show 3 slides at once on large screens
                 autoplay={true}
                 slidesToScroll={1}
                 isHoverable={true}
