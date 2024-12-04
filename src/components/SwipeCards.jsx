@@ -89,7 +89,10 @@ const SwipeCards = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 5, duration: 1 }}>
-          <a href='#vision'>
+          <a href='#vision' onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#vision').scrollIntoView({ behavior: 'smooth' });
+          }}>
             <div className='w-[48px] h-[48px] rounded-[10px] 
               bg-gradient-to-r from-blue-500 via-indigo-500 
             to-cyan-500 flex justify-center items-start p-[2px] 
