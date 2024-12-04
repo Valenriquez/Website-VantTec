@@ -88,20 +88,148 @@ const testimonials = [
 
 export { cardsData, testimonials };
 
-export const images = [
-  { src: "/1-rp-image.png", alt: "1. Finite-time control for an Unmanned Surface Vehicle based on adaptive sliding mode strategy", info: "1. Finite-time control for an Unmanned Surface Vehicle based on adaptive sliding mode strategy" },
-  { src: "/2-rp-image.jpg", alt: "2. Adaptive dynamic programming and deep reinforcement learning for the control of an unmanned surface vehicle: Experimental results", info: "2. Adaptive dynamic programming and deep reinforcement learning for the control of an unmanned surface vehicle: Experimental results" },
-  { src: "/3-rp-image.png", alt: "3. Guidance and Control Based on Adaptive Sliding Mode Strategy for a USV Subject to Uncertainties", info: "3. Guidance and Control Based on Adaptive Sliding Mode Strategy for a USV Subject to Uncertainties" },
-  { src: "/4-rp-image.png", alt: "4. Adaptive Integral Terminal Sliding Mode Control for an Unmanned Surface Vehicle Against External Disturbances", info: "4. Adaptive Integral Terminal Sliding Mode Control for an Unmanned Surface Vehicle Against External Disturbances" },
-  { src: "/5-rp-image.png", alt: "5. A Real-Time NMPC Guidance Law and Robust Control for an Autonomous Surface Vehicle", info: "5. A Real-Time NMPC Guidance Law and Robust Control for an Autonomous Surface Vehicle" },
-  { src: "/6-rp-image.png", alt: "6. Robust Visual Tracking Control Based on Adaptive Sliding Mode Strategy: Quadrotor UAV - Catamaran USV Heterogeneous System", info: "6. Robust Visual Tracking Control Based on Adaptive Sliding Mode Strategy: Quadrotor UAV - Catamaran USV Heterogeneous System" },
-  { src: "/7-rp-image.png", alt: "7. Control of an Unmanned Surface Vehicle Based on Adaptive Dynamic Programming and Deep Reinforcement Learning", info: "7. Control of an Unmanned Surface Vehicle Based on Adaptive Dynamic Programming and Deep Reinforcement Learning" },
-  { src: "/8-rp-image.png", alt: "8. USV Path-Following Control Based On Deep Reinforcement Learning and Adaptive Control", info: "8. USV Path-Following Control Based On Deep Reinforcement Learning and Adaptive Control" },
-  { src: "/9-rp-image.png", alt: "9. A 3D Vision Based Obstacle Avoidance Methodology for Unmanned Surface Vehicles", info: "9. A 3D Vision Based Obstacle Avoidance Methodology for Unmanned Surface Vehicles" },
-  { src: "/10-rp-image.png", alt: "10. Control of a Double Thruster Twin-Hull Unmanned Surface Vehicle: Experimental Results", info: "10. Control of a Double Thruster Twin-Hull Unmanned Surface Vehicle: Experimental Results" },
-  { src: "/11-rp-image.png", alt: "11. Modeling, identification and control of an unmanned surface vehicle", info: "11. Modeling, identification and control of an unmanned surface vehicle" },
-  { src: "/12-rp-image.png", alt: "12. Data Augmentation in Deep Learning-Based Obstacle Detection System for Autonomous Navigation on Aquatic Surfaces", info: "12. Data Augmentation in Deep Learning-Based Obstacle Detection System for Autonomous Navigation on Aquatic Surfaces" }
+export const home_aboutus_images = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
+export const home_about_us_companies_images = [
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png"
+  },
+  {
+    src: "/companies_logo/meta_logo.png"
+  },
+  {
+    src: "/companies_logo/microsoft-logo.png"
+  },
+  {
+    src: "/companies_logo/HRT_Primary_Logo_-_Full_Color.png"
+  },
+  {
+    src: "/companies_logo/bloomberg_logo.png"
+  },
+  {
+    src: "/companies_logo/Amazon_logo.svg.webp"
+  },
+  {
+    src: "/companies_logo/stanford-logo.png"
+  },
+  {
+    src: "/companies_logo/mit.png"
+  },
+  {
+    src: "/companies_logo/carnegie_mellon_university_logo-freelogovectors.net_.png"
+  },
+]
+
+export const awards_us_images = [
+  {
+    src: "/team/competition2.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/testing_boat.jpg",
+    alt: "Making Friends"
+  },
+  {
+    src: "public/team/boat.jpg",
+    alt: "Representing Mexico on Robonation"
+  }
+]
+
+
+export const projects_awards = [
+  {
+    name: "UAV Drone",
+    prizes: [
+      "Special Award de Drone Award",
+    ]
+  },
+  {
+    name: "USV Boat",
+    prizes: [
+      "Robonation (2019): 5th place, awarded $1,500 for performance",
+      "RoboBoat 2020: 1st place, awarded $3,000. Also received $1,500 each for technical report, intro video, and website design, plus a $1,000 special prize for Testing on the Horizon.",
+      "RoboBoat 2024: Received the $250 Persistence Award from RoboNation."
+    ]
+  }
 ];
+
+
+export const images = [
+  {
+    src: "/research/1-rp-image.webp",
+    alt: "Finite-time control for an Unmanned Surface Vehicle based on adaptive sliding mode strategy",
+    info: "Finite-time adaptive sliding mode control for USVs",
+  },
+  {
+    src: "/research/2-rp-image.webp",
+    alt: "Adaptive dynamic programming and deep reinforcement learning for the control of an unmanned surface vehicle: Experimental results",
+    info: "ADP and deep RL in USV control—experimental results",
+  },
+  {
+    src: "/research/3-rp-image.webp",
+    alt: "Guidance and Control Based on Adaptive Sliding Mode Strategy for a USV Subject to Uncertainties",
+    info: "Adaptive sliding mode guidance for USVs under uncertainties",
+  },
+  {
+    src: "/research/4-rp-image.webp",
+    alt: "Adaptive Integral Terminal Sliding Mode Control for an Unmanned Surface Vehicle Against External Disturbances",
+    info: "Integral terminal sliding mode control for USVs facing disturbances",
+  },
+  {
+    src: "/research/5-rp-image.webp",
+    alt: "A Real-Time NMPC Guidance Law and Robust Control for an Autonomous Surface Vehicle",
+    info: "Real-time NMPC guidance and robust control for ASVs",
+  },
+  {
+    src: "/research/6-rp-image.webp",
+    alt: "Robust Visual Tracking Control Based on Adaptive Sliding Mode Strategy: Quadrotor UAV - Catamaran USV Heterogeneous System",
+    info: "Visual tracking control for UAV-USV systems using adaptive sliding mode",
+  },
+  {
+    src: "/research/7-rp-image.webp",
+    alt: "Control of an Unmanned Surface Vehicle Based on Adaptive Dynamic Programming and Deep Reinforcement Learning",
+    info: "USV control via ADP and deep reinforcement learning",
+  },
+  {
+    src: "/research/8-rp-image.webp",
+    alt: "USV Path-Following Control Based On Deep Reinforcement Learning and Adaptive Control",
+    info: "Path-following control for USVs using deep reinforcement learning",
+  },
+{
+    src: "/research/9-rp-image.webp",
+    alt: "A 3D Vision Based Obstacle Avoidance Methodology for Unmanned Surface Vehicles",
+    info: "3D vision-based obstacle avoidance for USVs",
+  },
+  {
+    src: "/research/10-rp-image.webp",
+    alt: "Control of a Double Thruster Twin-Hull Unmanned Surface Vehicle: Experimental Results",
+    info: "Control experiments on twin-hull USVs with double thrusters",
+  },
+  {
+    src: "/research/11-rp-image.webp",
+    alt: "Modeling, identification and control of an unmanned surface vehicle",
+    info: "Modeling and control strategies for USVs",
+  },
+  {
+    src: "/research/12-rp-image.webp",
+    alt: "Data Augmentation in Deep Learning-Based Obstacle Detection System for Autonomous Navigation on Aquatic Surfaces",
+    info: "Enhancing aquatic obstacle detection with data augmentation",
+  },
+];
+
 
 export const images_awards = [
   { src: "/drone_award.png", alt: "Special Award de Drone Award de $1,000 dólares (2017)", info: "Special Award de Drone Award de $1,000 dólares (2017)" },
@@ -110,7 +238,7 @@ export const images_awards = [
   { src: "/roboboat.jpg", alt: "RoboBoat 2020: Por primera vez, VantTec obtuvó el 1er lugar en la competencia con la recepción, así como también en el diseño de reporte técnico, video de introducción, página web y la categoría Testing on the Horizon ", info: "RoboBoat 2020: Por primera vez, VantTec obtuvó el 1er lugar en la competencia con la recepción, así como también en el diseño de reporte técnico, video de introducción, página web y la categoría Testing on the Horizon" },
   { src: "/premio_rg.png", alt: "Ganador en la cartegoría de alumnos de profesional al presentar seis papers sobre temas de control, visión 3D y detección de obstáculos en la Ceremonia de Premiación al Premio Rómulo Garza 2020 ", info: "Ganador en la cartegoría de alumnos de profesional al presentar seis papers sobre temas de control, visión 3D y detección de obstáculos en la Ceremonia de Premiación al Premio Rómulo Garza 2020 " },
   { src: "/roboboat.jpg", alt: "RoboBoat 2024: Se obtuvo el Special Award de Persistence Award de $250 dólares por parte de RoboNation", info: "RoboBoat 2024: Se obtuvo el Special Award de Persistence Award de $250 dólares por parte de RoboNation" },
-  { src: "/xignux.png", alt: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge", info: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge" },
+  { src: "/xignux.png", alt: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge", info: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge" }
 
   
 ];
