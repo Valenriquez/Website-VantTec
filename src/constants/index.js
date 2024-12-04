@@ -88,6 +88,51 @@ const testimonials = [
 
 export { cardsData, testimonials };
 
+export const home_aboutus_images = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
+export const home_about_us_companies_images = [
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png"
+  },
+  {
+    src: "/companies_logo/meta_logo.png"
+  },
+  {
+    src: "/companies_logo/microsoft-logo.png"
+  },
+  {
+    src: "/companies_logo/HRT_Primary_Logo_-_Full_Color.png"
+  },
+  {
+    src: "/companies_logo/bloomberg_logo.png"
+  },
+  {
+    src: "/companies_logo/Amazon_logo.svg.webp"
+  },
+  {
+    src: "/companies_logo/stanford-logo.png"
+  },
+  {
+    src: "/companies_logo/mit.png"
+  },
+  {
+    src: "/companies_logo/carnegie_mellon_university_logo-freelogovectors.net_.png"
+  },
+]
+
 export const images = [
   {
     src: "/research/1-rp-image.webp",
