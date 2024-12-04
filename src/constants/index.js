@@ -146,8 +146,26 @@ export const awards_us_images = [
     src: "public/team/boat.jpg",
     alt: "Representing Mexico on Robonation"
   }
-
 ]
+
+
+export const projects_awards = [
+  {
+    name: "UAV Drone",
+    prizes: [
+      "Special Award de Drone Award",
+    ]
+  },
+  {
+    name: "USV Boat",
+    prizes: [
+      "Robonation (2019): 5th place, awarded $1,500 for performance",
+      "RoboBoat 2020: 1st place, awarded $3,000. Also received $1,500 each for technical report, intro video, and website design, plus a $1,000 special prize for Testing on the Horizon.",
+      "RoboBoat 2024: Received the $250 Persistence Award from RoboNation."
+    ]
+  }
+];
+
 
 export const images = [
   {
