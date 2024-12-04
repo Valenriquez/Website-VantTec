@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Individual item component for the carousel
-const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit }) => {
+const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit, customCardClass }) => {
     // State to manage hover effect
     const [isHovered, setIsHovered] = useState(false);
 
@@ -20,7 +20,7 @@ const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit }) =>
         <div className="px-2">
             {/* NextUI Card component with updated styling */}
             <Card
-                className={`w-full h-full relative overflow-hidden border-none ${objectFit ? "" : "m-3"}`}
+                className={`w-full h-full relative overflow-hidden border-none ${customCardClass}`}
                 onMouseEnter={() => setIsHovered(isHoverable)} // Handle hover start
                 onMouseLeave={() => setIsHovered(false)} // Handle hover end
                 isPressable={isPressable}
@@ -55,7 +55,7 @@ const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit }) =>
 };
 
 // Main carousel component remains the same
-const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true, speed = 300, slidesToScroll = 1, isHoverable= false, isPressable=false, autoplaySpeed= 0, objectFit=true, cssEase='', arrows=true}) => {
+const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true, speed = 300, slidesToScroll = 1, isHoverable= false, isPressable=false, autoplaySpeed= 0, objectFit=true, cssEase='', arrows=true, customCardClass=""}) => {
     // Settings for the react-slick slider
     const settings = {
         dots: true, // Show navigation dots
@@ -84,7 +84,7 @@ const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true,
         <Slider {...settings}>
             {/* Map through images array to render carousel items */}
             {images.map((image, index) => (
-                <CarouselItem key={index} image={image} height={height} isHoverable={isHoverable} isPressable={isPressable} objectFit={objectFit}/>
+                <CarouselItem key={index} image={image} height={height} isHoverable={isHoverable} isPressable={isPressable} objectFit={objectFit} customCardClass={customCardClass}/>
             ))}
         </Slider>
     );

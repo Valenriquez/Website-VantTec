@@ -95,11 +95,27 @@ export const home_aboutus_images = [
   },
   {
     src: "public/team/group.jpg",
-    alt: "Building Connections That Last a Lifetime"
+    alt: "Sprint day"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "public/team/IMG_8204.JPG",
+    alt: "Having fun during tests"
+  },
+  {
+    src: "public/team/2019.jpg",
     alt: "Representing Mexico"
+  },
+  {
+    src: "public/team/IMG_8393.jpeg",
+    alt: "Lifting each other up (Literally)"
+  },
+  {
+    src: "public/team/2018_2.jpg",
+        alt: "Competition"
+  },
+  {
+    src: "public/team/2018.jpg",
+    alt: "Competition"
   }
 ]
 
@@ -131,6 +147,32 @@ export const home_about_us_companies_images = [
   {
     src: "/companies_logo/carnegie_mellon_university_logo-freelogovectors.net_.png"
   },
+  {
+    src: "/companies_logo/zf.png"
+  },
+]
+
+export const home_sponsors = [
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png",
+    alt: "Google",
+    info: "Google is a cool company"
+  },
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png",
+    alt: "Google",
+    info: "Google is a cool company"
+  },
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png",
+    alt: "Google",
+    info: "Google is a cool company"
+  },
+  {
+    src: "/companies_logo/Google_2015_logo.svg.png",
+    alt: "Google",
+    info: "Google is a cool company"
+  }
 ]
 
 export const images = [

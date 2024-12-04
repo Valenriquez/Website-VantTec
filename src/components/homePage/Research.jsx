@@ -13,7 +13,7 @@ const Research = () => {
         // Container with responsive padding and centered content
         <div className="container mx-auto px-4 py-8">
             {/* Section title */}
-            <h2 className="text-2xl text-white font-thin mb-6 text-center">
+            <h2 className="text-white text-3xl md:text-4xl font-semibold mb-4">
                 Research Publications on Unmanned Surface Vehicles
             </h2>
 

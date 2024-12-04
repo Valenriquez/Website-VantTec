@@ -5,7 +5,7 @@ import About from './homePage/About.jsx';
 import Projects from './Projects';
 import Research from './homePage/Research.jsx';
 import Awards from './Awards';
-import Sponsors from './Sponsors';
+import Sponsors from './homePage/Sponsors.jsx';
 import Footer from './Footer';
 
 export {

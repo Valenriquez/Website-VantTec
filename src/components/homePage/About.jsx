@@ -56,10 +56,10 @@ const FirstCarousel = () => (
 
 const SecondCarousel = () => (
     <div className="flex-row">
-        <h1 className="text-4xl md:text-3xl tracking-tight mb-5">
-            Previous Members Whereabouts
+        <h1 className="text-3xl md:text-xl tracking-tight mb-5">
+            Our alumni have established themselves in leading technology and research institutions worldwide
         </h1>
-        <Carousel images={home_about_us_companies_images} isHoverable={true} arrows={false} autoplay={true} autoplaySpeed={0} speed={7000} slidesToShow={7}
+        <Carousel images={home_about_us_companies_images} isHoverable={false} arrows={false} autoplay={true} autoplaySpeed={0} speed={7000} slidesToShow={7}
                   height={"80px"} objectFit={false} cssEase={"linear"}></Carousel>
     </div>
 );
@@ -124,10 +124,10 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col justify-center"
                     >
-                        <h1 className="text-4xl md:text-3xl tracking-tight mb-4">
+                        <h1 className="text-white text-3xl md:text-4xl font-semibold mb-4">
                             ABOUT US
                         </h1>
-                        <p className="text-xl text-gray-300 font-light mb-6 leading-relaxed">
+                        <p className="text-xl text-gray-200 font-light mb-6 leading-relaxed">
                             Pioneering autonomous vehicle technology with innovation, research, and passion.
                             We're not just building vehicles; we're shaping the future of transportation.
                         </p>
