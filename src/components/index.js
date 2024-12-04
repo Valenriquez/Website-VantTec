@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import About from './homePage/About.jsx';
 import Projects from './Projects';
 import Research from './homePage/Research.jsx';
-import Awards from './Awards';
+import Awards from './homePage/Awards.jsx';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 
