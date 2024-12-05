@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Individual item component for the carousel
-const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit, customCardClass }) => {
+const CarouselItem = ({ image, height, width, isHoverable, isPressable, objectFit, customCardClass }) => {
     // State to manage hover effect
     const [isHovered, setIsHovered] = useState(false);
 
@@ -25,7 +25,7 @@ const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit, cust
                 onMouseLeave={() => setIsHovered(false)} // Handle hover end
                 isPressable={isPressable}
                 isHoverable
-                style={{ height }}
+                style={{ height, width }}
                 radius={"sm"}
             >
                 {/* Card Header */}
@@ -58,7 +58,7 @@ const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit, cust
 const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true, speed = 300, slidesToScroll = 1, isHoverable= false, isPressable=false, autoplaySpeed= 0, objectFit=true, cssEase='', arrows=true, customCardClass=""}) => {
     // Settings for the react-slick slider
     const settings = {
-        dots: true, // Show navigation dots
+        dots: false, // Show navigation dots
         infinite: true, // Enable infinite looping
         speed, // Transition speed in milliseconds
         slidesToShow, // Number of slides to show at once
@@ -71,10 +71,14 @@ const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true,
         responsive: [
             {
                 breakpoint: 1024, // Screen width for this setting
-                settings: { slidesToShow: 2 }, // Show 2 slides at a time
+                settings: { slidesToShow: slidesToShow, arrows: false  }, // Show 2 slides at a time
             },
             {
-                breakpoint: 600, // Screen width for this setting
+                breakpoint: 400, // Screen width for this setting
+                settings: { slidesToShow: 1, arrows: false }, // Show 1 slide at a time
+            },
+            {
+                breakpoint: 0, // Screen width for this setting
                 settings: { slidesToShow: 1, arrows: false }, // Show 1 slide at a time
             },
         ],
