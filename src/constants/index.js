@@ -37,21 +37,25 @@ const cardsData = [
     img: sdv,
     title: "SDV",
     desc: "A 100% electric vehicle with level 3 autonomy. We integrated advanced control algorithms and a sensor system to detect obstacles and position itself within the lane.",
+    canvasType: 'sdvs',
   },
   {
     img: drone,
     title: "Drone",
     desc: "Its main focus is on making solutions based on autonomous dones, such as package delivery, as well as participation in competitions, such as the Mexican Robotics Tournament.",
+    canvasType: 'boats',
   },
   {
     img: boat,
     title: "Boat",
     desc: "Develops an autonomous boat for RoboBoat competitions, focusing on control, navigation, and object recognition.",
+    canvasType: 'drones',
   },
   {
     img: submarine,
     title: "Submarine",
     desc: "Creates an autonomous submarine for RoboSub, tackling underwater tasks in global competitions.",
+    canvasType:'submarines',
   },  
 ]
 
