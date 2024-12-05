@@ -18,10 +18,10 @@ const sponsorsData = [
     },
     {
         id: 2,
-        name: "Tec de Monterrey",
-        logo: "/companies_logo/logo-tec-de-monterrey.webp",
+        name: "Ansys",
+        logo: "/companies_logo/Ansys_logo_(2019).svg.png",
         description: "Educational partner providing resources and support for robotics research.",
-        website: "https://tec.mx",
+        website: "https://www.ansys.com/",
         partnershipYear: "2017",
         contributions: [
             "Research facilities",
@@ -31,31 +31,17 @@ const sponsorsData = [
     },
     {
         id: 3,
-        name: "Tec de Monterrey",
-        logo: "/companies_logo/logo-tec-de-monterrey.webp",
+        name: "Grupo SCC",
+        logo: "/companies_logo/logo_grupossc.webp",
         description: "Educational partner providing resources and support for robotics research.",
-        website: "https://tec.mx",
+        website: "https://www.grupossc.com/",
         partnershipYear: "2017",
         contributions: [
             "Research facilities",
             "Technical mentorship",
             "Educational resources"
         ]
-    },
-    {
-        id: 4,
-        name: "Tec de Monterrey",
-        logo: "/companies_logo/logo-tec-de-monterrey.webp",
-        description: "Educational partner providing resources and support for robotics research.",
-        website: "https://tec.mx",
-        partnershipYear: "2017",
-        contributions: [
-            "Research facilities",
-            "Technical mentorship",
-            "Educational resources"
-        ]
-    },
-    // Add more sponsors...
+    }
 ];
 
 const SponsorCard = ({ sponsor }) => {
