@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { ansysInc, grupoSSC } from '../assets'
-
+import React, { useState } from 'react';
+import { Card, CardFooter, Button } from "@nextui-org/react";
+import { ansysInc, grupoSSC } from '../assets';
 
 const SponsorCard = ({ name, logo }) => {
   const [showText, setShowText] = useState(false);
@@ -10,16 +10,20 @@ const SponsorCard = ({ name, logo }) => {
   };
 
   return (
-    <div className="relative w-fit h-full flex flex-col justify-center items-center pb-0 cursor-pointer" onClick={handleClick}>
-      <img
-        src={logo}
-        alt={name}
-        className={`w-full h-full object-cover p-4 transition duration-300 ease-in-out ${showText ? 'brightness-50' : 'hover:brightness-50'}`}
-      />
-      <div className={`absolute inset-0 flex justify-center items-center bg-black transition-all duration-300 ${showText ? 'bg-opacity-85' : 'bg-opacity-0 hover:bg-opacity-50'}`}>
-        <p className={`text-white text-center transition-all duration-300 ${showText ? 'opacity-100' : 'opacity-0 hover:opacity-100'}`}>{name}</p>
-      </div>
-    </div>
+    <Card
+      isFooterBlurred={true}
+      radius="lg"
+      className="border-none rounded-lg bg-slate-900/80 justify-center items-center"
+      style={{ width: "300px", height: "300px"}}
+    >
+      <img src={logo} alt="" className='p-8'/>
+      <CardFooter className="justify-between bg-black/70 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-lg bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+        <p className="text-tiny text-white/80">{name}</p>
+        <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
+          Know more
+        </Button>
+      </CardFooter>
+    </Card>
   );
 };
 
@@ -38,7 +42,7 @@ const Sponsors = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sponsors
+export default Sponsors;

@@ -12,8 +12,10 @@ import maria from "./maria.jpg";
 import pedro from "./pedro.jpg";
 import ana from "./ana.jpg";
 import vanttec from "./vanttec.jpg";
-import grupoSSC from "./grupoSSC.jpg";
-import ansysInc from "./ansysInc.jpg";
+import grupoSSC from "./grupoSSCTransparent.png";
+import ansysInc from "./ansysIncTransparent.png";
+import vanttecBlanco from "./LogoBlanco_Blanco.png";
+import tecBlanco from "./Logo_Tec_Blanco.png";
 
 export {
   logo,
@@ -31,5 +33,7 @@ export {
   ana,
   vanttec,
   grupoSSC,
-  ansysInc
+  ansysInc,
+  vanttecBlanco,
+  tecBlanco,
 };
