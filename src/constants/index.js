@@ -37,21 +37,25 @@ const cardsData = [
     img: sdv,
     title: "SDV",
     desc: "A 100% electric vehicle with level 3 autonomy. We integrated advanced control algorithms and a sensor system to detect obstacles and position itself within the lane.",
+    canvasType: 'sdvs',
   },
   {
     img: drone,
     title: "Drone",
     desc: "Its main focus is on making solutions based on autonomous dones, such as package delivery, as well as participation in competitions, such as the Mexican Robotics Tournament.",
+    canvasType: 'boats',
   },
   {
     img: boat,
     title: "Boat",
     desc: "Develops an autonomous boat for RoboBoat competitions, focusing on control, navigation, and object recognition.",
+    canvasType: 'drones',
   },
   {
     img: submarine,
     title: "Submarine",
     desc: "Creates an autonomous submarine for RoboSub, tackling underwater tasks in global competitions.",
+    canvasType:'submarines',
   },  
 ]
 
@@ -87,6 +91,45 @@ const testimonials = [
 ]
 
 export { cardsData, testimonials };
+
+
+export const accordion_info_boat = [
+  {
+    title: "Xignux Challenge 2024",
+    content: `From May 7-8, 2024, VantTec was honored to be a finalist in the Xignux Challenge, a 24-hour challenge aimed at identifying socially responsible leaders to develop solutions for the 2030 Agenda. VantTec participated with their Autonomous Water Administrator System (AWAS) project. AWAS is a data-driven initiative involving an autonomous boat with sensors for water body monitoring.
+    
+    Originally developed by students in the USV project, AWAS integrates knowledge from competitive prototypes and takes it further by mapping water quality in real-time across different areas. The goal is to become a national leader in water monitoring and preservation technologies in Mexico.`
+  },
+  {
+    title: "RoboBoat 2024",
+    content: "From February 5-11, 2024, at Nathan Benderson Park in Sarasota, Florida, the team returned with their V-TEC-S-III model. After a week of hard work, they made it to the finals and won the Persistence Award of $250 from RoboNation. This experience motivated them to start the V-TEC-S-IV project for future RoboBoat competitions and external applications." 
+  },
+  {
+    title: "Rómulo Garza Award 2020",
+    content: `In 2021, Tec de Monterrey and Xignux organized the Rómulo Garza Award Ceremony for 2020, their highest recognition for research and innovation. VantTec won the award in the professional students category for publishing six papers on control, 3D vision, and obstacle detection.`
+  },
+  {
+    title: "RoboBoat 2020",
+    content: `In 2020, RoboBoat was held online due to the COVID-19 pandemic. Despite this, the team continued their efforts virtually, showcasing their V-TEC-S-III work. VantTec won 1st place, receiving $3,000, and also earned $1,500 for their technical report, intro video, and website design. Additionally, they received a $1,000 special award for the "Testing on the Horizon" category.`
+  },
+  {
+    title: "RoboBoat 2019",
+    content: `From June 17-23, 2019, the team participated in RoboNation's annual challenges with their successful engineering product, V-TEC-S-III. They secured 5th place and earned $1,500 for their performance.`
+  },
+  {
+    title: "RoboBoat 2018",
+    content: `From June 18-24, 2018, the team participated again with a new iteration of the vehicle: V-TEC-S-III. With support from sponsors like Uber ATG, Google, and NVIDIA, they won the $500 Engineering Integrity Special Award in the competition.`
+  },
+  {
+    title: "RoboBoat 2017",
+    content: `From July 20-25, 2017, the team participated for the first time in RoboNation's competition at Reed Canal Park, Florida. They competed with the first USV iteration, MTM Definity First, and won the $1,000 Drone Award for landing an autonomous drone on the autonomous boat.`
+  },
+  {
+    title: "USV | Unmanned Surface Vehicle",
+    content: `The Autonomous Surface Vehicle (ASV or USV) project started in 2017 as the first initiative by the VantTec student team. It aimed to accelerate Mexican technology development and provide younger team members with practical experience. The team designed an autonomous boat to compete in the annual RoboBoat competition, advancing research on autonomous vehicles with six published papers and presentations at international conferences.`
+  },
+];
+
 
 export const home_aboutus_images = [
   {

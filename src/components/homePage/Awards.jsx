@@ -16,8 +16,8 @@ const FirstCarousel = () => (
 const Awards = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl text-white font-semibold mb-8 text-center">
-        Awards
+      <h2 className="text-2xl text-white font-thin mb-6 text-center">
+            Awards
       </h2>
       <div className="container mx-auto px-4 py-12 space-y-8">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
