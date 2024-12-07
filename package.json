@@ -15,6 +15,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@nextui-org/accordion": "^2.2.1",
+    "@nextui-org/card": "^2.2.2",
     "@nextui-org/popover": "^2.3.1",
     "@react-three/drei": "^9.114.0",
     "@react-three/fiber": "^8.17.8",

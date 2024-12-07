@@ -176,6 +176,25 @@ export const home_about_us_companies_images = [
   },
 ]
 
+export const projects_blog_boat=[
+  {
+    date: "Dec 2024",
+    info: "Holiday Campaign",
+    image: "/boat/girls_boat.jpg",
+  },
+  {
+    date: "Jan 2025",
+    info: "New Year Launch",
+    image: "/boat/firends_boat.jpg",
+  },
+  {
+    date: "Spring 2025",
+    info: "Spring Collection",
+    image: "/boat/testing_boat.jpg",
+  },
+]
+
+
 export const awards_us_images = [
   {
     src: "/team/competition2.jpg",

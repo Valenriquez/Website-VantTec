@@ -5,7 +5,8 @@ import Carousel from '../components/shared/Carousel';
 import PopOverTop from '../components/shared/PopOverTop.jsx';
 import BoatsCanvas from '../components/canvas/Boats.jsx';
 import Accordion from '../components/shared/Accordion.jsx';
-import {accordion_info_boat, home_aboutus_images, home_about_us_companies_images} from "../constants/index.js";
+import {accordion_info_boat, home_aboutus_images, home_about_us_companies_images, projects_blog_boat} from "../constants/index.js";
+import CardProject from '../components/shared/CardProject.jsx';
 
 const stats = [
   {
@@ -104,27 +105,28 @@ const BoatProject = () => {
              
            </div>
        
-            <FirstCarousel/>
+             
           
         </div>
           
 
         <div className="mt-16 space-y-8">
-          <Achievements/>
-          <Images_Carousel/>
-
+          
           <h2 className="text-3xl font-bold">History</h2>
-          <Accordion
-            info={accordion_info_boat.map((item, index) => ({
-              title: item.title,
-              content: item.content
-            }))}
-            height="200px"
-            AccordionToShow={8}
-          />
+            <CardProject
+              projects={projects_blog_boat}
+              height="250px"
+              isHoverable={true}
+              objectFit="cover"
+              cssEase="ease-in-out"
+            />
+
+
+
+
 
           <h2 className="text-3xl font-bold">Our boats</h2>
-
+            
         </div>
       </div>
       </div>
