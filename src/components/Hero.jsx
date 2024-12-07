@@ -1,76 +1,130 @@
+import { useRef, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { arrow, videoBG } from '../assets'
+import { videoBG, logo } from '../assets';
+import { Button } from "@nextui-org/react";
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
-  const scrollToSection = () => {
-    window.scrollTo({
-      top: window.innerHeight * 0.90,
-      behavior: 'smooth',
-    });
-  };
+    // Refs for DOM elements
+    const bottomNavRef = useRef(null);
+    const videoContainerRef = useRef(null);
+    const [containerHeight, setContainerHeight] = useState('100vh');
 
-  return (
-    <section className="relative w-full h-screen mx-auto">
-      <video src={videoBG} autoPlay loop muted className="absolute w-full h-full object-cover" />
-      <div className="absolute w-full h-full top-0 left-0 bg-[#000000cc]"></div>
-      <div className={`absolute inset-0 m-auto flex flex-col items-center justify-center`}>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Vant<span className="text-[#345ba3]">TEC</span></h1>
-          <TypeAnimation
-      sequence={[
-        'The Future of Technology',
-        1000,
-        'The Future of Mobility',
-        1000,
-        'The Future of Innovation',
-        1000,
-        'The Future of Research',
-        1000,
-        'Navigating the Future',
-        1000
-      ]}
-      wrapper="span"
-      speed={30}
-      style={{ fontSize: '2em', display: 'inline-block' }}
-      repeat={0}
-      className={`${styles.heroSubText} mt-2 text-white`}
-    />
-      </div>
-      <motion.div 
-        className='absolute xs:bottom-10 bottom-32 w-full flex 
-        justify-center items-center'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 13, duration: 1 }}
-      >
-        <a onClick={scrollToSection}>
-          <div className='w-[48px] h-[48px] rounded-[10px] 
-          bg-gradient-to-r from-blue-500 via-indigo-500 
-          to-cyan-500 flex justify-center items-start p-[2px] 
-          hover:shadow-lg hover:shadow-purple-600/30'>
-            <div className='flex h-full w-full items-center 
-            justify-center rounded-[10px] bg-primary'>
-              <motion.div 
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3, 
-                  repeat: Infinity, 
-                  repeatType: "loop",
-                }}
-              >
-                <img src={arrow} alt="Flecha hacia abajo" 
-                className=""/>
-              </motion.div>
+    /**
+     * Adjusts the video container height based on bottom navigation height
+     */
+    useEffect(() => {
+        const adjustHeight = () => {
+            if (bottomNavRef.current) {
+                const navHeight = bottomNavRef.current.offsetHeight;
+                const viewportHeight = window.innerHeight;
+                setContainerHeight(`${viewportHeight}px`);
+
+                if (videoContainerRef.current) {
+                    videoContainerRef.current.style.height = `${viewportHeight - navHeight}px`;
+                }
+            }
+        };
+
+        // Initial adjustment and event listener setup
+        adjustHeight();
+        window.addEventListener('resize', adjustHeight);
+
+        return () => window.removeEventListener('resize', adjustHeight);
+    }, []);
+
+    /**
+     * Handles smooth scroll to content section
+     */
+    const handleScroll = () => {
+        const navHeight = bottomNavRef.current?.offsetHeight || 0;
+        const scrollTarget = window.innerHeight - navHeight;
+
+        window.scrollTo({
+            top: scrollTarget,
+            behavior: 'smooth'
+        });
+    };
+
+    return (
+        <div className="relative" style={{ height: containerHeight }}>
+            {/* Video Container */}
+            <div
+                ref={videoContainerRef}
+                className="relative overflow-hidden"
+            >
+                <video
+                    src={videoBG}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute w-full h-full object-cover"
+                />
+                <div className="absolute w-full h-full top-0 left-0 bg-[#00000066]" />
             </div>
-          </div>
-        </a>
-      </motion.div>
-    </section>
-  )
-}
 
-export default Hero
+            {/* Bottom Navigation Bar */}
+            <div
+                ref={bottomNavRef}
+                className="absolute bottom-0 left-0 right-0 bg-black border-t border-white/10"
+            >
+                <div className="container mx-auto px-4 py-6">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+                        {/* Logo and Text Section */}
+                        <div className="flex flex-col sm:flex-row items-center gap-4">
+                            <img
+                                src={logo}
+                                alt="VantTEC Logo"
+                                className="h-12 w-auto"
+                            />
+
+                            {/* Desktop Content */}
+                            <div className="hidden lg:block">
+                                <p className="text-white/90 font-light text-lg">
+                                    Technology and Research Group Pioneering Work in Autonomous Vehicles
+                                </p>
+                            </div>
+
+                            {/* Mobile/Tablet Typing Animation */}
+                            <div className="block lg:hidden">
+                                <TypeAnimation
+                                    sequence={[
+                                        'The Future of Technology',
+                                        1000,
+                                        'The Future of Mobility',
+                                        1000,
+                                        'The Future of Innovation',
+                                        1000,
+                                        'The Future of Research',
+                                        1000,
+                                        'Navigating the Future',
+                                        1000
+                                    ]}
+                                    wrapper="span"
+                                    speed={30}
+                                    repeat={Infinity}
+                                    className="text-white/90 font-light text-base sm:text-lg text-center"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Action Button */}
+                        <Button
+                            radius="lg"
+                            className="bg-white/10 backdrop-blur-sm border border-white/10
+                                     text-white font-light px-6 py-3
+                                     hover:bg-white/20 transition-all duration-300
+                                     min-w-[140px]"
+                            onClick={handleScroll}
+                        >
+                            Explore More
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Hero;

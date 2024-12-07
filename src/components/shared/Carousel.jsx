@@ -30,11 +30,6 @@ const CarouselItem = ({ image, height, width, isHoverable, isPressable, objectFi
             >
                 {/* Card Header */}
                 <CardHeader className="absolute z-10 top-1 flex-col items-start">
-                    {image.label && (
-                        <p className="text-tiny text-white/60 uppercase font-bold">
-                            {image.label}
-                        </p>
-                    )}
                     <h4 className="text-white font-medium text-lg text-left">{image.alt}</h4>
                 </CardHeader>
                 {/* Image component with hover effect */}
@@ -74,11 +69,11 @@ const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true,
                 settings: { slidesToShow: slidesToShow, arrows: false  }, // Show 2 slides at a time
             },
             {
-                breakpoint: 400, // Screen width for this setting
-                settings: { slidesToShow: 1, arrows: false }, // Show 1 slide at a time
+                breakpoint: 800, // Screen width for this setting
+                settings: { slidesToShow: 2, arrows: false }, // Show 1 slide at a time
             },
             {
-                breakpoint: 0, // Screen width for this setting
+                breakpoint: 650, // Screen width for this setting
                 settings: { slidesToShow: 1, arrows: false }, // Show 1 slide at a time
             },
         ],

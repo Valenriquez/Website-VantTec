@@ -83,6 +83,7 @@ const FirstCarousel = () => (
             speed={400}
             isHoverable={true}
             objectFit={true}
+            customCardClass={"sm:h-[200px] md:h-full"}
         />
     </div>
 );
@@ -120,8 +121,8 @@ const SecondCarousel = () => (
  */
 const About = () => {
     return (
-        <div className="xs:h-min-[100%] lg:h-min-[70%] min text-white flex flex-col justify-center items-center w-full h-full">
-            <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16">
+        <section id="about" className="xs:h-min-[100%] lg:h-min-[70%] min text-white flex flex-col justify-center items-center w-full">
+            <div className="container h-full mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16">
                 {/* Main content section with responsive layout */}
                 <div className="flex flex-col xl:grid xl:grid-cols-2 gap-8 xl:gap-12">
                     {/* Text and Stats Content - Always on top for mobile/tablet */}
@@ -163,7 +164,7 @@ const About = () => {
                     <SecondCarousel />
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 };
 

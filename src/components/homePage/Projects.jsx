@@ -22,7 +22,7 @@ import { Award, Trophy, Medal, Star, Crown, Lightbulb } from 'lucide-react';
 const projectsData = [
     {
         id: 1,
-        name: "VTec S4",
+        name: "UUV",
         modelPath: "./drone/vtec_s4.gltf",
         image: "/roboboatPhoto.jpg",
         description: "Advanced autonomous drone for aerial surveillance and mapping",
@@ -46,6 +46,54 @@ const projectsData = [
     },
     {
         id: 2,
+        name: "UAV",
+        modelPath: "./drone/uuv2.gltf",
+        image: "/roboboatPhoto.jpg",
+        description: "Next-generation autonomous underwater vehicle for deep-sea exploration",
+        specifications: {
+            weight: "45kg",
+            dimensions: "150cm x 80cm x 60cm",
+            maxDepth: "100m",
+            operationTime: "4 hours",
+            sensors: [
+                "Sonar Array",
+                "Depth Sensors",
+                "HD Cameras",
+                "Temperature Sensors"
+            ]
+        },
+        achievements: [
+            "RoboSub 2023 Finals Qualifier",
+            "Best Innovation Award",
+            "Technical Excellence Recognition"
+        ]
+    },
+    {
+        id: 3,
+        name: "SDV",
+        modelPath: "./drone/vtec_s4.gltf",
+        image: "/roboboatPhoto.jpg",
+        description: "Next-generation autonomous underwater vehicle for deep-sea exploration",
+        specifications: {
+            weight: "45kg",
+            dimensions: "150cm x 80cm x 60cm",
+            maxDepth: "100m",
+            operationTime: "4 hours",
+            sensors: [
+                "Sonar Array",
+                "Depth Sensors",
+                "HD Cameras",
+                "Temperature Sensors"
+            ]
+        },
+        achievements: [
+            "RoboSub 2023 Finals Qualifier",
+            "Best Innovation Award",
+            "Technical Excellence Recognition"
+        ]
+    },
+    {
+        id: 4,
         name: "VTec S5",
         modelPath: "./drone/uuv2.gltf",
         image: "/roboboatPhoto.jpg",
@@ -156,7 +204,7 @@ const getAchievementIcon = (achievement) => {
 };
 
 /**
- * Project tab navigation component with compact design
+ * Project tab navigation component with inline responsive layout
  */
 const ProjectTabs = ({ selectedProject, onProjectChange, projects }) => (
     <Tabs
@@ -164,19 +212,59 @@ const ProjectTabs = ({ selectedProject, onProjectChange, projects }) => (
         onSelectionChange={onProjectChange}
         variant="solid"
         classNames={{
-            base: "w-fit min-w-[200px]", // Use w-fit to adjust to content
-            tabList: "gap-2 relative rounded-xl p-1.5 border border-white/10 bg-white/5",
+            base: "w-full", // Full width container
+            tabList: [
+                // Base styles
+                "relative",
+                "p-1",
+                "border",
+                "border-white/10",
+                "bg-white/5",
+                "rounded-xl",
+                // Flex layout
+                "flex",
+                "flex-row",
+                "flex-nowrap", // Prevent wrapping
+                "overflow-x-auto", // Enable horizontal scroll
+                "gap-0",
+                "scrollbar-thin",
+                "scrollbar-thumb-white/10",
+                "scrollbar-track-transparent"
+            ].join(" "),
             cursor: "bg-blue-500",
-            tab: "h-10 w-full whitespace-normal data-[selected=true]:bg-white/10",
-            tabContent: "group-data-[selected=true]:text-white"
+            tab: [
+                // Base styles
+                "h-12",
+                "flex-shrink-0", // Prevent shrinking
+                "data-[selected=true]:bg-white/10",
+                "rounded-lg",
+                "transition-all",
+                "duration-200",
+                "hover:bg-white/5",
+                // Responsive width
+                "w-[120px]",
+                "sm:w-[140px]",
+                "md:w-[160px]",
+                // Content alignment
+                "flex",
+                "items-center",
+                "justify-center",
+                "px-2",
+                "py-2"
+            ].join(" "),
+            tabContent: [
+                "group-data-[selected=true]:text-white",
+                "w-full",
+                "text-center"
+            ].join(" ")
         }}
     >
         {projects.map((project, index) => (
             <Tab
                 key={`project-${index}`}
                 title={
-                    <div className="px-3 py-1 w-full">
-                        <span className="text-base font-semibold block text-left">
+                    <div className="w-full">
+                        <span className="text-sm sm:text-base font-semibold truncate block">
                             {project.name}
                         </span>
                     </div>
@@ -185,7 +273,6 @@ const ProjectTabs = ({ selectedProject, onProjectChange, projects }) => (
         ))}
     </Tabs>
 );
-
 /**
  * Achievements display component
  */
@@ -289,7 +376,7 @@ const Projects = () => {
     const currentProject = projectsData[parseInt(selectedProject.split('-')[1])];
 
     return (
-        <div className="xs:h-min-[100%] lg:h-min-[70%] text-white flex flex-col justify-center items-center w-full">
+        <section id="projects" className="xs:h-min-[100%] lg:h-min-[70%] text-white flex flex-col justify-center items-center w-full">
             <div className="container mx-auto px-2 sm:px-6 py-2 sm:py-12 space-y-6">
                 {/* Header */}
                 <motion.div
@@ -333,7 +420,7 @@ const Projects = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

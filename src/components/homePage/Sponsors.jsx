@@ -125,7 +125,7 @@ const SponsorCard = ({ sponsor }) => {
 
 const Sponsors = () => {
     return (
-        <section className="py-16">
+        <section className="xs:h-min-[100%] lg:h-min-[70%]" id="sponsors">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
