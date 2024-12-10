@@ -22,7 +22,7 @@ import { Award, Trophy, Medal, Star, Crown, Lightbulb } from 'lucide-react';
 const projectsData = [
     {
         id: 1,
-        name: "UUV",
+        name: "USV",
         modelPath: "./drone/vtec_s4.gltf",
         image: "/roboboatPhoto.jpg",
         description: "Advanced autonomous drone for aerial surveillance and mapping",
@@ -46,7 +46,7 @@ const projectsData = [
     },
     {
         id: 2,
-        name: "UAV",
+        name: "UUV",
         modelPath: "./drone/uuv2.gltf",
         image: "/roboboatPhoto.jpg",
         description: "Next-generation autonomous underwater vehicle for deep-sea exploration",
@@ -70,7 +70,7 @@ const projectsData = [
     },
     {
         id: 3,
-        name: "SDV",
+        name: "UAV",
         modelPath: "./drone/vtec_s4.gltf",
         image: "/roboboatPhoto.jpg",
         description: "Next-generation autonomous underwater vehicle for deep-sea exploration",
@@ -94,7 +94,7 @@ const projectsData = [
     },
     {
         id: 4,
-        name: "VTec S5",
+        name: "SDV",
         modelPath: "./drone/uuv2.gltf",
         image: "/roboboatPhoto.jpg",
         description: "Next-generation autonomous underwater vehicle for deep-sea exploration",

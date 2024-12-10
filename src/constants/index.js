@@ -91,31 +91,24 @@ export { cardsData, testimonials };
 export const home_aboutus_images = [
   {
     src: "/team/roboboat.jpg",
-    alt: "Roboboat 2024",
   },
   {
     src: "public/team/group.jpg",
-    alt: "Sprint day"
   },
   {
     src: "public/team/IMG_8204.JPG",
-    alt: "Having fun during tests"
   },
   {
     src: "public/team/2019.jpg",
-    alt: "Representing Mexico"
   },
   {
     src: "public/team/IMG_8393.jpeg",
-    alt: "Lifting each other up (Literally)"
   },
   {
     src: "public/team/2018_2.jpg",
-        alt: "Competition"
   },
   {
     src: "public/team/2018.jpg",
-    alt: "Competition"
   }
 ]
 

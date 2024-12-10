@@ -14,6 +14,7 @@ import ana from "./ana.jpg";
 import vanttec from "./vanttec.jpg";
 import grupoSSC from "./grupoSSC.jpg";
 import ansysInc from "./ansysInc.jpg";
+import tecBlanco from "./Logo_Tec_Blanco.png";
 
 export {
   logo,
@@ -31,5 +32,6 @@ export {
   ana,
   vanttec,
   grupoSSC,
-  ansysInc
+  ansysInc,
+  tecBlanco
 };

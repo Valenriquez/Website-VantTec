@@ -132,10 +132,10 @@ const Sponsors = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-left mb-12"
                 >
-                    <h2 className="text-white text-3xl md:text-4xl font-semibold mb-4">
+                    <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                         Our Sponsors
-                    </h2>
-                    <p className="text-xl text-gray-200 font-light mb-6 leading-relaxed">
+                    </h1>
+                    <p className="text-base sm:text-lg lg:text-xl text-gray-200 font-light leading-relaxed">
                         Partnering with industry leaders to drive innovation in autonomous robotics
                     </p>
                 </motion.div>

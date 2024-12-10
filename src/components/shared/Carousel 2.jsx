@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Individual item component for the carousel
-const CarouselItem = ({ image, height, width, isHoverable, isPressable, objectFit, customCardClass }) => {
+const CarouselItem = ({ image, height, isHoverable, isPressable, objectFit, customCardClass }) => {
     // State to manage hover effect
     const [isHovered, setIsHovered] = useState(false);
 
@@ -25,13 +25,18 @@ const CarouselItem = ({ image, height, width, isHoverable, isPressable, objectFi
                 onMouseLeave={() => setIsHovered(false)} // Handle hover end
                 isPressable={isPressable}
                 isHoverable
-                style={{ height, width }}
+                style={{ height }}
                 radius={"sm"}
             >
                 {/* Card Header */}
-                {image.alt && <CardHeader className="absolute z-10 flex-col items-start">
-                    <h4 className="text-black font-medium text-left">{image.alt}</h4>
-                </CardHeader>}
+                <CardHeader className="absolute z-10 top-1 flex-col items-start">
+                    {image.label && (
+                        <p className="text-tiny text-white/60 uppercase font-bold">
+                            {image.label}
+                        </p>
+                    )}
+                    <h4 className="text-white font-medium text-lg text-left">{image.alt}</h4>
+                </CardHeader>
                 {/* Image component with hover effect */}
                 <Image
                     removeWrapper
@@ -53,7 +58,7 @@ const CarouselItem = ({ image, height, width, isHoverable, isPressable, objectFi
 const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true, speed = 300, slidesToScroll = 1, isHoverable= false, isPressable=false, autoplaySpeed= 0, objectFit=true, cssEase='', arrows=true, customCardClass=""}) => {
     // Settings for the react-slick slider
     const settings = {
-        dots: false, // Show navigation dots
+        dots: true, // Show navigation dots
         infinite: true, // Enable infinite looping
         speed, // Transition speed in milliseconds
         slidesToShow, // Number of slides to show at once
@@ -66,14 +71,10 @@ const Carousel = ({ images, height = '300px', slidesToShow = 3, autoplay = true,
         responsive: [
             {
                 breakpoint: 1024, // Screen width for this setting
-                settings: { slidesToShow: slidesToShow, arrows: false  }, // Show 2 slides at a time
+                settings: { slidesToShow: 2 }, // Show 2 slides at a time
             },
             {
-                breakpoint: 800, // Screen width for this setting
-                settings: { slidesToShow: 2, arrows: false }, // Show 1 slide at a time
-            },
-            {
-                breakpoint: 650, // Screen width for this setting
+                breakpoint: 600, // Screen width for this setting
                 settings: { slidesToShow: 1, arrows: false }, // Show 1 slide at a time
             },
         ],

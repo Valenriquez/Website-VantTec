@@ -83,7 +83,7 @@ const FirstCarousel = () => (
             speed={400}
             isHoverable={true}
             objectFit={true}
-            customCardClass={"sm:h-[200px] md:h-full"}
+            customCardClass={"sm:h-[250px] lg:h-full"}
         />
     </div>
 );
