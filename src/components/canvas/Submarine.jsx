@@ -27,7 +27,7 @@ const Submarines = () => {
             <pointLight intensity={2} position={[0.5,0.1,4]}/>
             <pointLight intensity={0.5} position={[0.5,0.1,6]}/>
             <primitive  object={submarines.scene}
-                scale={13}
+                scale={15}
             />
         </group>
     );

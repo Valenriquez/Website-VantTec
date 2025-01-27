@@ -3,8 +3,12 @@ import { motion } from 'framer-motion';
 import {home_aboutus_images, home_about_us_companies_images} from "../../constants/index.js";
 import { Trophy, Users, FileText, Award } from 'lucide-react';
 import Carousel from "../shared/Carousel.jsx";
+import arrow from "../../assets/arrow.svg";
+
 
 const BigStats = () => {
+
+   
     const stats = [
         {
             icon: <Award className="w-8 h-8 text-blue-600 opacity-80" />,
@@ -112,8 +116,19 @@ const Achievements = () => {
     );
 };
 
+const scrollToSection = () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const targetScroll = currentScroll + 1000; 
+
+    window.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth',
+    });
+};
 const About = () => {
     return (
+        <> 
+        <section id="about"> 
         <div className="min-h-screen text-white flex flex-row justify-center items-center w-full">
             <div className="container mx-auto px-4 py-12 space-y-16">
                 {/* First Row: Text (Mobile First - Stacked) */}
@@ -125,7 +140,7 @@ const About = () => {
                         className="flex flex-col justify-center"
                     >
                         <h1 className="text-4xl md:text-3xl tracking-tight mb-4">
-                            ABOUT US
+                            About Us
                         </h1>
                         <p className="text-xl text-gray-300 font-light mb-6 leading-relaxed">
                             Pioneering autonomous vehicle technology with innovation, research, and passion.
@@ -161,8 +176,36 @@ const About = () => {
                 >
                     <SecondCarousel />
                 </motion.div>
+            <div className="flex justify-center"> 
+                <a onClick={scrollToSection}>
+                    <div className='w-[48px] h-[48px] rounded-[10px] 
+                        bg-gradient-to-r from-blue-500 via-indigo-500 
+                        to-cyan-500 flex justify-center items-start p-[2px] 
+                        hover:shadow-lg hover:shadow-purple-600/30'>
+                        <div className='flex h-full w-full items-center 
+                        justify-center rounded-[10px] bg-primary'>
+                        <motion.div 
+                            animate={{
+                            y: [0, -10, 0],
+                            }}
+                            transition={{
+                            duration: 3, 
+                            repeat: Infinity, 
+                            repeatType: "loop",
+                            }}
+                        >
+                            <img src={arrow} alt="Flecha hacia abajo" className="" />
+                        </motion.div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
             </div>
         </div>
+        </section>
+
+        
+                </>
     );
 };
 

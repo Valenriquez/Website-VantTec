@@ -1,117 +1,64 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Trophy, Users, FileText, Award } from 'lucide-react';
 import Carousel from '../components/shared/Carousel';
-import PopOverTop from '../components/shared/PopOverTop.jsx';
-import BoatsCanvas from '../components/canvas/Boats.jsx';
-import Accordion from '../components/shared/Accordion.jsx';
-import {accordion_info_boat, home_aboutus_images, home_about_us_companies_images, projects_blog_boat} from "../constants/index.js";
-import CardProject from '../components/shared/CardProject.jsx';
+import {home_aboutus_images, tabsDataBoat} from "../constants/index.js";
+import TabsComponent from '../components/shared/Tabs.jsx';
+import VideoCarousel from '../components/shared/VideoCarousel.jsx';
 
-const stats = [
+const videoList = [
   {
-      icon: <Award className="w-8 h-8 text-blue-600 opacity-80" />,
-      number: "7",
-      label: "International Competitions",
-      popoverContent: "This stat represents the number of international competitions participated."
+    src: "/videos/1_boat.mov",
+    poster: "/videos/17sept2.jpg",
+    title: "Back to Basics",
   },
   {
-      icon: <Trophy className="w-8 h-8 text-blue-600 opacity-80" />,
-      number: "18",
-      label: "International Awards",
-      popoverContent: "This stat reflects the international awards the team has won."
+    src: "/videos/2_boat.mov",
+    poster: "/videos/18sept1.jpg",
+    title: "An Unexpected Surprise",
   },
   {
-      icon: <Users className="w-8 h-8 text-blue-600 opacity-80" />,
-      number: "73",
-      label: "Members",
-      popoverContent: "This stat shows the total number of active members in the team."
+    src: "/videos/3_boat.mov",
+    poster: "/videos/20sept1.jpg",
+    title: " Mapping New Possibilities",
   },
   {
-      icon: <FileText className="w-8 h-8 text-blue-600 opacity-80" />,
-      number: "12",
-      label: "Papers Published",
-      popoverContent: "This stat indicates the number of research papers the team has published."
-  },
+    src: "/videos/4_boat.mov",
+    poster: "/videos/5sept2.jpg",
+    title: "The Hull—A Fresh Start",
+  }, {
+    src: "/videos/5_boat.mov",
+    poster: "/videos/27nov1.jpg",
+    title: " Reinforcing for Resilience",
+  }, {
+    src: "/videos/7_boat.mov",
+    poster: "/videos/11dic1.jpg",
+    title: "Testing and Triumphs",
+  }
 ];
 
+
 const FirstCarousel = () => (
-  <Carousel images={home_aboutus_images} slidesToShow={1} height={"540px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
+  <Carousel images={home_aboutus_images} slidesToShow={1} height={"500px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
 );
-
-
-const Images_Carousel = () => (
-  <div className="flex-row">
-      
-      <Carousel images={home_about_us_companies_images} isHoverable={true} arrows={false} autoplay={true} autoplaySpeed={0} speed={7000} slidesToShow={7}
-                height={"80px"} objectFit={false} cssEase={"linear"}></Carousel>
-  </div>
-);
-
-const Achievements = () => {
-    const achievementData = [
-        {
-            title: "Purpose",
-            description: "Advance the development of autonomous vehicle technology by creating an autonomous boat capable of tackling the challenges presented in RoboNation's RoboBoat competitions. The project integrates key technologies such as control systems, mission solutions, autonomous navigation, and object recognition. Additionally, it aims to contribute to the scientific community through research in areas like control, 3D vision, and obstacle detection. More recently, the project has evolved to focus on innovation and addressing social, economic, and environmental issues, particularly through the development of the AWAS (Autonomous Water Management System), which aims to improve water monitoring and management."
-        }
-        
-    ];
-
-    return (
-        <div className="space-y-6">
-            {achievementData.map((achievement, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.2, duration: 0.5 }}
-                    className="bg-white/5 rounded-2xl p-6 border border-white/10"
-                >
-                    <h3 className="text-2xl font-semibold text-white mb-3">{achievement.title}</h3>
-                    {Array.isArray(achievement.description) ? (
-                        <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                            {achievement.description.map((item, idx) => (
-                                <li key={idx} className="text-sm font-light">{item}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p className="text-gray-300 font-light">{achievement.description}</p>
-                    )}
-                </motion.div>
-            ))}
-        </div>
-    );
-};
 
 const BoatProject = () => {
   return (
      <div className="min-h-screen bg-black text-white p-9 md:p-20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl font-bold">Boat</h1>
-            <p className="text-gray-300 leading-relaxed text-justify">
-              The USV (Unmanned Surface Vehicle) project, also known as the autonomous boat,
-              was one of the first projects developed by the VantTec Autonomous Vehicles team in 2017.
-              It focuses on creating an autonomous boat to meet the challenges of RoboNation's RoboBoat
-              competitions. The project integrates control systems, mission solutions, autonomous navigation,
-              and object recognition. Additionally, it has contributed to research papers on control, 3D vision,
-              and obstacle detection, and has recently shifted focus toward innovation and social, economic,
-              and environmental wellbeing through the AWAS project: Autonomous Water Management System.
-            </p>
+        <FirstCarousel />
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-12">
+            <h1 className="py-8 text-5xl md:text-6xl font-bold">Boat</h1>
+              <p className="text-gray-300 leading-relaxed text-justify">
+              The Autonomous Surface Boat (USV) project, launched in 2017, marked one of the first initiatives by VantTec, the Autonomous Unmanned Vehicles team at Tecnológico de Monterrey. 
+              This ambitious endeavor focuses on developing a self-operating boat capable of tackling the diverse challenges presented in the annual RoboBoat competitions organized by RoboNation. 
+              The project integrates cutting-edge systems for autonomous navigation, mission-solving, control algorithms, and object recognition.
 
-            <PopOverTop stats={stats} />
-
-             
-           </div>
-       
-             
-          
-        </div>
-          
-
+              Beyond its competitive edge, the USV has significantly contributed to academic advancement, supporting the publication of research papers in fields such as control systems, 
+              3D vision, and obstacle detection. Recently, the project has shifted towards creating impactful solutions through innovation, emphasizing social, economic, and environmental 
+              sustainability. This evolution has given rise to AWAS (Autonomous Water Administration System), an initiative dedicated to improving water management with autonomy at its core.
+              </p>
+          </div>
         <div className="mt-16 space-y-8">
-          
+        {/*
           <h2 className="text-3xl font-bold">History</h2>
             <CardProject
               projects={projects_blog_boat}
@@ -120,20 +67,18 @@ const BoatProject = () => {
               objectFit="cover"
               cssEase="ease-in-out"
             />
-
-
-
-
-
-          <h2 className="text-3xl font-bold">Our boats</h2>
-            
-        </div>
+        */}
+         <div className="flex justify-center">
+              <VideoCarousel videos={videoList} width="80%" height="500px" />
+          </div>
+          
+          <TabsComponent tabs={tabsDataBoat} />
+        
+           
+        
       </div>
-      </div>
-       
-       
-      
-    
+    </div>
+  </div>
 
     )
 };

@@ -15,6 +15,8 @@ const FirstCarousel = () => (
 );
 const Awards = () => {
   return (
+    <> 
+    <section id="awards"> 
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-2xl text-white font-thin mb-6 text-center">
             Awards
@@ -77,6 +79,8 @@ const Awards = () => {
         </div>
       </div>
     </div>
+    </section>
+    </>
   );
 };
 

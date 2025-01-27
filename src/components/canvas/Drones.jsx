@@ -27,7 +27,7 @@ const Drones = () => {
       <pointLight intensity={2} position={[1,1,0]}/>
       <pointLight intensity={1} position={[3.5,1,0]}/>
       <primitive  object={drone.scene}
-        scale={6.5}
+        scale={30}
         position-y={0}
         rotation-y={0}
       />

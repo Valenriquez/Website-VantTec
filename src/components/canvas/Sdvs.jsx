@@ -27,7 +27,7 @@ const Sdvs = () => {
             <pointLight intensity={2} position={[1,1,0]}/>
             <pointLight intensity={1} position={[3.5,1,0]}/>
             <primitive  object={sdv.scene}
-                scale={6.5}
+                scale={10.5}
             />
         </group>
     );

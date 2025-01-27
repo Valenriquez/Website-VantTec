@@ -36,26 +36,26 @@ const cardsData = [
   {
     img: sdv,
     title: "SDV",
-    desc: "A 100% electric vehicle with level 3 autonomy. We integrated advanced control algorithms and a sensor system to detect obstacles and position itself within the lane.",
-    canvasType: 'sdvs',
+    desc: "A 100% electric vehicle with level 3 autonomy. With advanced control algorithms and a sensor system integration.",
+    canvasType: 'sdv',
   },
   {
     img: drone,
     title: "Drone",
-    desc: "Its main focus is on making solutions based on autonomous dones, such as package delivery, as well as participation in competitions, such as the Mexican Robotics Tournament.",
-    canvasType: 'boats',
+    desc: "Its main focus is on making solutions based on autonomous dones, such as package delivery and participating in competitions.",
+    canvasType: 'drone',
   },
   {
     img: boat,
     title: "Boat",
     desc: "Develops an autonomous boat for RoboBoat competitions, focusing on control, navigation, and object recognition.",
-    canvasType: 'drones',
+    canvasType: 'boat',
   },
   {
     img: submarine,
     title: "Submarine",
     desc: "Creates an autonomous submarine for RoboSub, tackling underwater tasks in global competitions.",
-    canvasType:'submarines',
+    canvasType:'submarine',
   },  
 ]
 
@@ -201,11 +201,11 @@ export const awards_us_images = [
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/testing_boat.jpg",
+    src: "/team/testing_boat.jpg",
     alt: "Making Friends"
   },
   {
-    src: "public/team/boat.jpg",
+    src: "/team/boat.jpg",
     alt: "Representing Mexico on Robonation"
   }
 ]
@@ -228,70 +228,80 @@ export const projects_awards = [
   }
 ];
 
-
 export const images = [
   {
     src: "/research/1-rp-image.webp",
     alt: "Finite-time control for an Unmanned Surface Vehicle based on adaptive sliding mode strategy",
     info: "Finite-time adaptive sliding mode control for USVs",
+    link: "https://www.researchgate.net/publication/360411670_Finite-time_control_for_an_Unmanned_Surface_Vehicle_based_on_adaptive_sliding_mode_strategy" // Optional link
   },
   {
     src: "/research/2-rp-image.webp",
     alt: "Adaptive dynamic programming and deep reinforcement learning for the control of an unmanned surface vehicle: Experimental results",
     info: "ADP and deep RL in USV control—experimental results",
+    link: "https://www.sciencedirect.com/science/article/abs/pii/S0967066121000848" // Optional link
   },
   {
     src: "/research/3-rp-image.webp",
     alt: "Guidance and Control Based on Adaptive Sliding Mode Strategy for a USV Subject to Uncertainties",
     info: "Adaptive sliding mode guidance for USVs under uncertainties",
+    link: "https://ieeexplore.ieee.org/document/9383425" // Optional link
   },
   {
     src: "/research/4-rp-image.webp",
     alt: "Adaptive Integral Terminal Sliding Mode Control for an Unmanned Surface Vehicle Against External Disturbances",
     info: "Integral terminal sliding mode control for USVs facing disturbances",
+    link: "https://www.sciencedirect.com/science/article/pii/S2405896321014968"// No link for this item, so the card won't be clickable
   },
   {
     src: "/research/5-rp-image.webp",
     alt: "A Real-Time NMPC Guidance Law and Robust Control for an Autonomous Surface Vehicle",
     info: "Real-time NMPC guidance and robust control for ASVs",
+    link: "https://www.sciencedirect.com/science/article/pii/S2405896321015032" // Optional link
   },
   {
     src: "/research/6-rp-image.webp",
     alt: "Robust Visual Tracking Control Based on Adaptive Sliding Mode Strategy: Quadrotor UAV - Catamaran USV Heterogeneous System",
     info: "Visual tracking control for UAV-USV systems using adaptive sliding mode",
+    link: "https://ieeexplore.ieee.org/document/9476707" // Optional link
   },
   {
     src: "/research/7-rp-image.webp",
     alt: "Control of an Unmanned Surface Vehicle Based on Adaptive Dynamic Programming and Deep Reinforcement Learning",
     info: "USV control via ADP and deep reinforcement learning",
+    link: "https://www.researchgate.net/publication/342899432_Control_of_an_Unmanned_Surface_Vehicle_Based_on_Adaptive_Dynamic_Programming_and_Deep_Reinforcement_Learning" // Optional link
   },
   {
     src: "/research/8-rp-image.webp",
     alt: "USV Path-Following Control Based On Deep Reinforcement Learning and Adaptive Control",
     info: "Path-following control for USVs using deep reinforcement learning",
+    link: "https://ieeexplore.ieee.org/document/9389360" // Optional link
   },
-{
+  {
     src: "/research/9-rp-image.webp",
     alt: "A 3D Vision Based Obstacle Avoidance Methodology for Unmanned Surface Vehicles",
     info: "3D vision-based obstacle avoidance for USVs",
+    link: "https://www.researchgate.net/publication/337228613_A_3D_Vision_Based_Obstacle_Avoidance_Methodology_for_Unmanned_Surface_Vehicles" // Optional link
   },
   {
     src: "/research/10-rp-image.webp",
     alt: "Control of a Double Thruster Twin-Hull Unmanned Surface Vehicle: Experimental Results",
     info: "Control experiments on twin-hull USVs with double thrusters",
+    link: "https://www.researchgate.net/publication/337228677_Control_of_a_Double_Thruster_Twin-Hull_Unmanned_Surface_Vehicle_Experimental_Results" // Optional link
   },
   {
     src: "/research/11-rp-image.webp",
     alt: "Modeling, identification and control of an unmanned surface vehicle",
     info: "Modeling and control strategies for USVs",
+    link: "https://www.researchgate.net/publication/255907995_Modeling_Identification_and_Control_of_an_Unmanned_Surface_Vehicle" // Optional link
   },
   {
     src: "/research/12-rp-image.webp",
     alt: "Data Augmentation in Deep Learning-Based Obstacle Detection System for Autonomous Navigation on Aquatic Surfaces",
     info: "Enhancing aquatic obstacle detection with data augmentation",
+    link: "https://www.researchgate.net/publication/351564571_Data_Augmentation_in_Deep_Learning-Based_Obstacle_Detection_System_for_Autonomous_Navigation_on_Aquatic_Surfaces" // Optional link
   },
 ];
-
 
 export const images_awards = [
   { src: "/drone_award.png", alt: "Special Award de Drone Award de $1,000 dólares (2017)", info: "Special Award de Drone Award de $1,000 dólares (2017)" },
@@ -303,4 +313,69 @@ export const images_awards = [
   { src: "/xignux.png", alt: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge", info: "Xignux challenge 2024: VantTec tuvo el honor de ser finalistas en el reto de 24 horas de Xignux llamada Xignux Challenge" }
 
   
+];
+
+export const tabsDataBoat = [
+  {
+    key: "localization",
+    title: "Localization",
+    content:
+      "Last season, one of our biggest challenges was the unreliable GPS data from our IMU, which caused severe odometry issues. Despite our efforts to recalibrate the magnetometer, reset parameters, and consult sensor documentation, the results remained inconsistent. This led us to explore RTK technology, supported by our SBG IMU. By integrating RTK antennas and a receiver, we achieved a much more precise GPS solution. Testing the system in real conditions showed significant improvements, and we even adopted LIOSAM mapping for indoor odometry in our campus pool, overcoming the limitations of GPS in restricted areas."
+  },
+  {
+    key: "newDesign",
+    title: "A New Design",
+    content:
+      "Returning from last year’s competition, it was clear our boat needed a complete overhaul. The old hull design was plagued with issues: permanent thruster mounts, difficult electronics access, and poor transportability. A new modular hull, funded by the Mechatronics Department, provided a fresh start. Aluminum profiles formed the structure, and a single electronics box allowed easier maintenance. Modular thruster adapters underwent several iterations to ensure durability and quick replacements, even incorporating wetlinks to prevent hull damage. After testing, we reinforced weak points and fine-tuned the design, achieving a highly functional and resilient system."
+  },
+  {
+    key: "testing",
+    title: "Testing and Iteration",
+    content:
+      "Testing played a critical role in refining our systems. Early trials revealed weaknesses, such as fragile thruster mounts and leakage issues, but each setback informed better solutions. We used silicone adhesive to address hull sealing problems and 3D-printed replacement parts for damaged components. By the end of the year, our boat was equipped with a robust electronics layout and fully integrated systems, ready for water trials. These tests not only validated our designs but also ensured modularity and repairability under real-world conditions, paving the way for future competition success."
+  },
+];
+
+
+export const tabsDataSDV = [
+  {
+    key: "history",
+    title: "History",
+    content:
+      "The autonomous vehicle project began in 2021 as VantTec's third major challenge. Inspired by a professor’s vision to transform a golf cart into an autonomous vehicle, the project gained momentum in 2022 through a partnership with ZF, a global leader in mobility technologies. This collaboration provided funding and internship opportunities for the project leaders."
+  },
+  {
+    key: "milestones",
+    title: "Key Milestones",
+    content:
+      "80th Anniversary of Tec de Monterrey: We celebrated with our first autonomous passenger tour, demonstrating GPS-based navigation to campus leaders. Opening of ZF's First R&D Center in Mexico: We completed over 10 autonomous tours at ZF’s R&D facility in FINSA Industrial Park, utilizing LioSAM for detailed mapping and NTD Matching for precise vehicle localization."
+  },
+  {
+    key: "currentStatus",
+    title: "Current Status",
+    content:
+      "We proudly present a fully electric, Level 3 autonomous vehicle, designed and programmed by talented students at Tec de Monterrey. This cutting-edge project integrates advanced control algorithms and a sensor system, including Lidar and cameras, to detect obstacles and navigate precisely within lanes. Built for autonomous tours around campus, it showcases the potential of our students in developing smart and sustainable mobility technologies, turning ideas into real-world solutions."
+  }
+];
+
+
+export const tabsDataDrone = [
+  {
+    key: "history",
+    title: "History",
+    content:
+      "One of the latest vehicles to become a solid area of focus was the drone vehicle, due to its shifting focus between competitions, projects, and objectives. Despite this, the drone has participated in competitions such as Mathworks and will soon be part of the TMR competition. One of its most ambitious projects is drone delivery."
+  },
+  {
+    key: "droneDelivery",
+    title: "Drone Delivery (P.A.T.O.S.)",
+    content:
+      "The drone delivery project (P.A.T.O.S.) began its implementation in late 2023. Currently, we have a functional drone designed to carry loads up to 1 kg over distances no greater than 1 km. These limitations arise from certain components used in its development, such as LiPo batteries, which provide great power but support only 15-20 minutes of flight time. The design of the drone is versatile, as it is also intended to carry objects (usually cones) in the TMR competition, allowing the vehicle to participate in various competitions that provide valuable experience for all team members."
+  },
+  {
+    key: "currentStatus",
+    title: "Current Status",
+    content:
+      "We continue to refine the drone's capabilities for various challenges, and its performance in competitions demonstrates the team's ability to tackle real-world applications. The P.A.T.O.S. drone remains a testament to innovation, versatility, and the dedication of our members, advancing through key milestones and further enhancing its practical capabilities."
+  }
 ];
