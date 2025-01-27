@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {home_aboutus_images, tabsDataDrone} from "../constants/index.js";
+import {home_aboutus_images, tabsDataDrone, carrousel2drone} from "../constants/index.js";
 import { Trophy, Users, FileText, Award } from 'lucide-react';
 import Carousel from '../components/shared/Carousel';
 import {home_about_us_companies_images, projects_blog_boat} from "../constants/index.js";
@@ -39,14 +39,19 @@ const videoList = [
   }
 ];
 
-const FirstCarousel = () => (
+const FirstCarouselDrone = () => (
   <Carousel images={home_aboutus_images} slidesToShow={1} height={"500px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
 );
+
+const SecondCarouselDrone = () => (
+  <Carousel images={carrousel2drone} slidesToShow={2} height={"400px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
+);
+
 
 const DroneProject = () => {
   return (
     <div className="min-h-screen bg-black text-white p-9 md:p-20">
-    <FirstCarousel />
+    <FirstCarouselDrone />
     <div className="max-w-7xl mx-auto">
       <div className="space-y-12">
         <h1 className="py-8 text-5xl md:text-6xl font-bold">Drone</h1>
@@ -65,10 +70,9 @@ const DroneProject = () => {
           cssEase="ease-in-out"
         />
     */}
-     <div className="flex justify-center">
-          <VideoCarousel videos={videoList} width="80%" height="500px" />
-      </div>
       
+      <SecondCarouselDrone />
+       
       <TabsComponent tabs={tabsDataDrone} />
     
        

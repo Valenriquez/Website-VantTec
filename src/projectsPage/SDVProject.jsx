@@ -1,5 +1,5 @@
 import React from 'react';
-import {home_aboutus_images, tabsDataSDV} from "../constants/index.js";
+import {home_aboutus_images, tabsDataSDV, carrousel2sdv} from "../constants/index.js";
 import VideoCarousel from '../components/shared/VideoCarousel.jsx';
 import TabsComponent from '../components/shared/Tabs.jsx';  
 import Carousel from '../components/shared/Carousel.jsx';
@@ -35,14 +35,18 @@ const videoList = [
   }
 ];
 
-const FirstCarousel = () => (
+const FirstCarouselSDV = () => (
   <Carousel images={home_aboutus_images} slidesToShow={1} height={"500px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
+);
+
+const SecondCarouselSDV = () => (
+  <Carousel images={carrousel2sdv} slidesToShow={2} height={"400px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
 );
 
 const SDVProject = () => {
   return (
     <div className="min-h-screen bg-black text-white p-9 md:p-20">
-    <FirstCarousel />
+    <FirstCarouselSDV />
     <div className="max-w-7xl mx-auto">
       <div className="space-y-12">
         <h1 className="py-8 text-5xl md:text-6xl font-bold">SDV</h1>
@@ -62,10 +66,7 @@ const SDVProject = () => {
           cssEase="ease-in-out"
         />
     */}
-     <div className="flex justify-center">
-          <VideoCarousel videos={videoList} width="80%" height="500px" />
-      </div>
-      
+       <SecondCarouselSDV />
       <TabsComponent tabs={tabsDataSDV} />
     
        

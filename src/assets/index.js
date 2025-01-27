@@ -16,6 +16,7 @@ import grupoSSC from "./grupoSSC.png";
 import ansysInc from "./ansysInc.jpg";
 import alwayssunny from "./allwayssunny.png";
 import mercalabs from "./mercalabs.png"
+import mecalabs from "./mecalabs.png";
 
 export {
   logo,
@@ -35,5 +36,6 @@ export {
   grupoSSC,
   ansysInc, 
   mercalabs,
-  alwayssunny
+  alwayssunny,
+  mecalabs
 };

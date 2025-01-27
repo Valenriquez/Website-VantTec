@@ -130,6 +130,108 @@ export const accordion_info_boat = [
   },
 ];
 
+export const carrousel1drone = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
+export const carrousel2drone = [
+  {
+    src: "/drone/drone_pic1.jpg",
+    alt: "Drone Meeting",
+  },
+  {
+    src:"/drone/drone_pic4.jpg",
+    alt: "Drone Meeting",
+  },
+  {
+    src:"/drone/drone_pic6.jpg",
+    alt: "Drone"
+  }, 
+  {
+    src: "/drone/drone_pic7.jpg",
+    alt: "Drone"
+  },
+  {
+    src:"/drone/drone_pic8.jpg",
+    alt: "Drone"
+  },
+  {
+    src:"/drone/drone_pic5.jpg",
+    alt: "Drone Team"
+  }
+]
+
+export const carrousel1sdv = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
+export const carrousel2sdv = [
+  {
+    src: "/sdv/sdv_pic1.png",
+    alt: "Team Meetings",
+  },
+  {
+    src: "/sdv/sdv_pic2.png",
+    alt: "SDV Advancements"
+  },
+  {
+    src: "/sdv/sdv_pic2.png",
+    alt: "Driving SDV"
+  }
+]
+
+export const carrousel1submarine = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
+export const carrousel2submarine = [
+  {
+    src: "/team/roboboat.jpg",
+    alt: "Roboboat 2024",
+  },
+  {
+    src: "public/team/group.jpg",
+    alt: "Building Connections That Last a Lifetime"
+  },
+  {
+    src: "public/team/competencia.jpg",
+    alt: "Representing Mexico"
+  }
+]
+
 
 export const home_aboutus_images = [
   {

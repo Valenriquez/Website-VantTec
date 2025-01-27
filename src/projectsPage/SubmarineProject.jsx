@@ -36,14 +36,19 @@ const videoList = [
   }
 ];
 
-const FirstCarousel = () => (
+const FirstCarouselSubmarine = () => (
   <Carousel images={home_aboutus_images} slidesToShow={1} height={"500px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
 );
+
+const SecondCarouselSubmarine = () => (
+  <Carousel images={home_aboutus_images} slidesToShow={2} height={"400px"} arrows={false} autoplay={true} autoplaySpeed={3000} speed={400} isHoverable={true} objectFit={true}></Carousel>
+);
+
 
 const SubmarineProject = () => {
   return (
     <div className="min-h-screen bg-black text-white p-9 md:p-20">
-    <FirstCarousel />
+    <FirstCarouselSubmarine />
     <div className="max-w-7xl mx-auto">
       <div className="space-y-12">
         <h1 className="py-8 text-5xl md:text-6xl font-bold">Submarine</h1>
@@ -64,9 +69,8 @@ const SubmarineProject = () => {
           cssEase="ease-in-out"
         />
     */}
-     <div className="flex justify-center">
-          <VideoCarousel videos={videoList} width="80%" height="500px" />
-      </div>
+      <SecondCarouselSubmarine />
+
       
        
     
