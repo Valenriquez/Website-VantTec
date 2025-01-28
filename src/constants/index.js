@@ -132,102 +132,102 @@ export const accordion_info_boat = [
 
 export const carrousel1drone = [
   {
-    src: "/team/roboboat.jpg",
+    src: "team/roboboat.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/group.jpg",
+    src: "team/group.jpg",
     alt: "Building Connections That Last a Lifetime"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "team/competencia.jpg",
     alt: "Representing Mexico"
   }
 ]
 
 export const carrousel2drone = [
   {
-    src: "/drone/drone_pic1.jpg",
+    src: "drone/drone_pic1.jpg",
     alt: "Drone Meeting",
   },
   {
-    src:"/drone/drone_pic4.jpg",
+    src:"drone/drone_pic4.jpg",
     alt: "Drone Meeting",
   },
   {
-    src:"/drone/drone_pic6.jpg",
+    src:"drone/drone_pic6.jpg",
     alt: "Drone"
   }, 
   {
-    src: "/drone/drone_pic7.jpg",
+    src: "drone/drone_pic7.jpg",
     alt: "Drone"
   },
   {
-    src:"/drone/drone_pic8.jpg",
+    src:"drone/drone_pic8.jpg",
     alt: "Drone"
   },
   {
-    src:"/drone/drone_pic5.jpg",
+    src:"drone/drone_pic5.jpg",
     alt: "Drone Team"
   }
 ]
 
 export const carrousel1sdv = [
   {
-    src: "/team/roboboat.jpg",
+    src: "team/roboboat.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/group.jpg",
+    src: "team/group.jpg",
     alt: "Building Connections That Last a Lifetime"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "team/competencia.jpg",
     alt: "Representing Mexico"
   }
 ]
 
 export const carrousel2sdv = [
   {
-    src: "/sdv/sdv_pic1.png",
+    src: "sdv/sdv_pic1.png",
     alt: "Team Meetings",
   },
   {
-    src: "/sdv/sdv_pic2.png",
+    src: "sdv/sdv_pic2.png",
     alt: "SDV Advancements"
   },
   {
-    src: "/sdv/sdv_pic2.png",
+    src: "sdv/sdv_pic2.png",
     alt: "Driving SDV"
   }
 ]
 
 export const carrousel1submarine = [
   {
-    src: "/team/roboboat.jpg",
+    src: "team/roboboat.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/group.jpg",
+    src: "team/group.jpg",
     alt: "Building Connections That Last a Lifetime"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "team/competencia.jpg",
     alt: "Representing Mexico"
   }
 ]
 
 export const carrousel2submarine = [
   {
-    src: "/team/roboboat.jpg",
+    src: "team/roboboat.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/group.jpg",
+    src: "team/group.jpg",
     alt: "Building Connections That Last a Lifetime"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "team/competencia.jpg",
     alt: "Representing Mexico"
   }
 ]
@@ -235,46 +235,46 @@ export const carrousel2submarine = [
 
 export const home_aboutus_images = [
   {
-    src: "/team/roboboat.jpg",
+    src: "team/roboboat.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "public/team/group.jpg",
+    src: "team/group.jpg",
     alt: "Building Connections That Last a Lifetime"
   },
   {
-    src: "public/team/competencia.jpg",
+    src: "team/competencia.jpg",
     alt: "Representing Mexico"
   }
 ]
 
 export const home_about_us_companies_images = [
   {
-    src: "/companies_logo/Google_2015_logo.svg.png"
+    src: "companies_logo/Google_2015_logo.svg.png"
   },
   {
-    src: "/companies_logo/meta_logo.png"
+    src: "companies_logo/meta_logo.png"
   },
   {
-    src: "/companies_logo/microsoft-logo.png"
+    src: "companies_logo/microsoft-logo.png"
   },
   {
-    src: "/companies_logo/HRT_Primary_Logo_-_Full_Color.png"
+    src: "companies_logo/HRT_Primary_Logo_-_Full_Color.png"
   },
   {
-    src: "/companies_logo/bloomberg_logo.png"
+    src: "companies_logo/bloomberg_logo.png"
   },
   {
-    src: "/companies_logo/Amazon_logo.svg.webp"
+    src: "companies_logo/Amazon_logo.svg.webp"
   },
   {
-    src: "/companies_logo/stanford-logo.png"
+    src: "companies_logo/stanford-logo.png"
   },
   {
-    src: "/companies_logo/mit.png"
+    src: "companies_logo/mit.png"
   },
   {
-    src: "/companies_logo/carnegie_mellon_university_logo-freelogovectors.net_.png"
+    src: "companies_logo/carnegie_mellon_university_logo-freelogovectors.net_.png"
   },
 ]
 
@@ -282,32 +282,32 @@ export const projects_blog_boat=[
   {
     date: "Dec 2024",
     info: "Holiday Campaign",
-    image: "/boat/girls_boat.jpg",
+    image: "boat/girls_boat.jpg",
   },
   {
     date: "Jan 2025",
     info: "New Year Launch",
-    image: "/boat/firends_boat.jpg",
+    image: "boat/firends_boat.jpg",
   },
   {
     date: "Spring 2025",
     info: "Spring Collection",
-    image: "/boat/testing_boat.jpg",
+    image: "boat/testing_boat.jpg",
   },
 ]
 
 
 export const awards_us_images = [
   {
-    src: "/team/competition2.jpg",
+    src: "team/competition2.jpg",
     alt: "Roboboat 2024",
   },
   {
-    src: "/team/testing_boat.jpg",
+    src: "team/competencia.jpg",
     alt: "Making Friends"
   },
   {
-    src: "/team/boat.jpg",
+    src: "team/2019.jpg",
     alt: "Representing Mexico on Robonation"
   }
 ]
@@ -332,73 +332,73 @@ export const projects_awards = [
 
 export const images = [
   {
-    src: "/research/1-rp-image.webp",
+    src: "research/1-rp-image.webp",
     alt: "Finite-time control for an Unmanned Surface Vehicle based on adaptive sliding mode strategy",
     info: "Finite-time adaptive sliding mode control for USVs",
     link: "https://www.researchgate.net/publication/360411670_Finite-time_control_for_an_Unmanned_Surface_Vehicle_based_on_adaptive_sliding_mode_strategy" // Optional link
   },
   {
-    src: "/research/2-rp-image.webp",
+    src: "research/2-rp-image.webp",
     alt: "Adaptive dynamic programming and deep reinforcement learning for the control of an unmanned surface vehicle: Experimental results",
     info: "ADP and deep RL in USV control—experimental results",
     link: "https://www.sciencedirect.com/science/article/abs/pii/S0967066121000848" // Optional link
   },
   {
-    src: "/research/3-rp-image.webp",
+    src: "research/3-rp-image.webp",
     alt: "Guidance and Control Based on Adaptive Sliding Mode Strategy for a USV Subject to Uncertainties",
     info: "Adaptive sliding mode guidance for USVs under uncertainties",
     link: "https://ieeexplore.ieee.org/document/9383425" // Optional link
   },
   {
-    src: "/research/4-rp-image.webp",
+    src: "research/4-rp-image.webp",
     alt: "Adaptive Integral Terminal Sliding Mode Control for an Unmanned Surface Vehicle Against External Disturbances",
     info: "Integral terminal sliding mode control for USVs facing disturbances",
     link: "https://www.sciencedirect.com/science/article/pii/S2405896321014968"// No link for this item, so the card won't be clickable
   },
   {
-    src: "/research/5-rp-image.webp",
+    src: "research/5-rp-image.webp",
     alt: "A Real-Time NMPC Guidance Law and Robust Control for an Autonomous Surface Vehicle",
     info: "Real-time NMPC guidance and robust control for ASVs",
     link: "https://www.sciencedirect.com/science/article/pii/S2405896321015032" // Optional link
   },
   {
-    src: "/research/6-rp-image.webp",
+    src: "research/6-rp-image.webp",
     alt: "Robust Visual Tracking Control Based on Adaptive Sliding Mode Strategy: Quadrotor UAV - Catamaran USV Heterogeneous System",
     info: "Visual tracking control for UAV-USV systems using adaptive sliding mode",
     link: "https://ieeexplore.ieee.org/document/9476707" // Optional link
   },
   {
-    src: "/research/7-rp-image.webp",
+    src: "research/7-rp-image.webp",
     alt: "Control of an Unmanned Surface Vehicle Based on Adaptive Dynamic Programming and Deep Reinforcement Learning",
     info: "USV control via ADP and deep reinforcement learning",
     link: "https://www.researchgate.net/publication/342899432_Control_of_an_Unmanned_Surface_Vehicle_Based_on_Adaptive_Dynamic_Programming_and_Deep_Reinforcement_Learning" // Optional link
   },
   {
-    src: "/research/8-rp-image.webp",
+    src: "research/8-rp-image.webp",
     alt: "USV Path-Following Control Based On Deep Reinforcement Learning and Adaptive Control",
     info: "Path-following control for USVs using deep reinforcement learning",
     link: "https://ieeexplore.ieee.org/document/9389360" // Optional link
   },
   {
-    src: "/research/9-rp-image.webp",
+    src: "research/9-rp-image.webp",
     alt: "A 3D Vision Based Obstacle Avoidance Methodology for Unmanned Surface Vehicles",
     info: "3D vision-based obstacle avoidance for USVs",
     link: "https://www.researchgate.net/publication/337228613_A_3D_Vision_Based_Obstacle_Avoidance_Methodology_for_Unmanned_Surface_Vehicles" // Optional link
   },
   {
-    src: "/research/10-rp-image.webp",
+    src: "research/10-rp-image.webp",
     alt: "Control of a Double Thruster Twin-Hull Unmanned Surface Vehicle: Experimental Results",
     info: "Control experiments on twin-hull USVs with double thrusters",
     link: "https://www.researchgate.net/publication/337228677_Control_of_a_Double_Thruster_Twin-Hull_Unmanned_Surface_Vehicle_Experimental_Results" // Optional link
   },
   {
-    src: "/research/11-rp-image.webp",
+    src: "research/11-rp-image.webp",
     alt: "Modeling, identification and control of an unmanned surface vehicle",
     info: "Modeling and control strategies for USVs",
     link: "https://www.researchgate.net/publication/255907995_Modeling_Identification_and_Control_of_an_Unmanned_Surface_Vehicle" // Optional link
   },
   {
-    src: "/research/12-rp-image.webp",
+    src: "research/12-rp-image.webp",
     alt: "Data Augmentation in Deep Learning-Based Obstacle Detection System for Autonomous Navigation on Aquatic Surfaces",
     info: "Enhancing aquatic obstacle detection with data augmentation",
     link: "https://www.researchgate.net/publication/351564571_Data_Augmentation_in_Deep_Learning-Based_Obstacle_Detection_System_for_Autonomous_Navigation_on_Aquatic_Surfaces" // Optional link
