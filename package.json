@@ -2,7 +2,7 @@
   "name": "barnav",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://vanttecweb.github.io/Website-VantTec/",
+  "homepage": "https://vanttec.com/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
